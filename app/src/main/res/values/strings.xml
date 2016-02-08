@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="hello_world">Bonjour le monde !</string>
+
+    <string name="button_english">English</string>
+    <string name="button_french">Français</string>
+    <string name="button_chinese">中文</string>
+    <string name="button_japanese">日本語</string>
+    <string name="title_activity_function_list">FunctionListActivity</string>
+    <string name="consultant">Consultant</string>
+    <string name="gallery">Gallery</string>
+    <string name="website">Website</string>
+    <string name="button_about">about</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="title_activity_website">WebsiteActivity</string>
+
+</resources>

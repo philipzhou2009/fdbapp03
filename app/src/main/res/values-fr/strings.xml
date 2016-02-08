@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Mon Application</string>
+    <string name="hello_world">Bonjour le monde !</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="edit_message">Enter a message</string>
+    <string name="button_send">SEND</string>
+    <string name="button_english">fr English</string>
+    <string name="button_french">fr French</string>
+    <string name="button_chinese">fr Chinese</string>
+    <string name="button_japanese">fr Japanese</string>
+    <string name="consultant">fr Consultant</string>
+    <string name="gallery">Gallery</string>
+    <string name="website">Website</string>
+    <string name="button_about">about</string>
+</resources>
