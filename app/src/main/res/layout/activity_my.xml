@@ -1,10 +1,19 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    style="@style/FDBWindowStyle"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:configChanges="keyboardHidden|orientation"
-    android:screenOrientation="landscape">
+    android:screenOrientation="landscape"
+    >
+
+    <RelativeLayout
+        android:id="@+id/childLayout"
+        android:layout_width="match_parent"
+        android:layout_height="108dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/flower_repeat"></RelativeLayout>
 
     <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
@@ -13,39 +22,31 @@
 
         android:layout_centerInParent="true"
         android:alignmentMode="alignBounds"
-        android:columnCount="2"
+        android:columnCount="1"
 
         android:columnOrderPreserved="false"
         android:useDefaultMargins="true">
 
         <Button
             android:id="@+id/buttonFr"
-            style="@style/CKButton"
+            style="@style/FDBButtonStyle"
             android:text="@string/button_french" />
 
 
         <Button
             android:id="@+id/buttonEn"
-            style="@style/CKButton"
+            style="@style/FDBButtonStyle"
             android:text="@string/button_english" />
 
         <Button
             android:id="@+id/buttonCh"
-            android:layout_width="200dp"
-            android:layout_height="60dp"
-            android:layout_alignBottom="@+id/relativeLayout"
-            android:layout_toEndOf="@+id/relativeLayout"
-            android:layout_toRightOf="@+id/relativeLayout"
+            style="@style/FDBButtonStyle"
             android:text="@string/button_chinese" />
 
 
         <Button
             android:id="@+id/buttonJa"
-            android:layout_width="200dp"
-            android:layout_height="60dp"
-            android:layout_alignBottom="@+id/relativeLayout"
-            android:layout_toEndOf="@+id/relativeLayout"
-            android:layout_toRightOf="@+id/relativeLayout"
+            style="@style/FDBButtonStyle"
             android:text="@string/button_japanese" />
 
 

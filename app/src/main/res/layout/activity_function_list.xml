@@ -1,65 +1,49 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    style="@style/FDBWindowStyle"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:configChanges="keyboardHidden|orientation"
-    android:screenOrientation="landscape">
+    android:screenOrientation="landscape"
+    android:theme="@style/AppTheme2"
+    >
+
+    <RelativeLayout
+        android:id="@+id/childLayout"
+        android:layout_width="match_parent"
+        android:layout_height="108dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/flower_repeat"></RelativeLayout>
 
     <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
-
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
         android:layout_centerInParent="true"
         android:alignmentMode="alignBounds"
-        android:columnCount="2"
-
+        android:columnCount="1"
         android:columnOrderPreserved="false"
         android:useDefaultMargins="true">
 
         <Button
             android:id="@+id/btnConsultant"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/relativeLayout"
-            android:layout_toLeftOf="@+id/relativeLayout"
-            android:layout_toStartOf="@+id/relativeLayout"
-            android:minWidth="110dp"
+            style="@style/FDBButtonStyle"
             android:text="@string/consultant" />
-
 
         <Button
             android:id="@+id/btnGallery"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/relativeLayout"
-            android:layout_toLeftOf="@+id/relativeLayout"
-            android:layout_toStartOf="@+id/relativeLayout"
-            android:minWidth="110dp"
+            style="@style/FDBButtonStyle"
             android:text="@string/gallery" />
 
         <Button
             android:id="@+id/btnWebsite"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/relativeLayout"
-            android:layout_toEndOf="@+id/relativeLayout"
-            android:layout_toRightOf="@+id/relativeLayout"
-            android:minWidth="110dp"
+            style="@style/FDBButtonStyle"
             android:text="@string/website" />
-
 
         <Button
             android:id="@+id/btnAbout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/relativeLayout"
-            android:layout_toEndOf="@+id/relativeLayout"
-            android:layout_toRightOf="@+id/relativeLayout"
-            android:minWidth="110dp"
+            style="@style/FDBButtonStyle"
             android:text="@string/button_about" />
-
 
     </GridLayout>
 

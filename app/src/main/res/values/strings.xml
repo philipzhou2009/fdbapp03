@@ -4,7 +4,7 @@
 
     <string name="button_english">English</string>
     <string name="button_french">Français</string>
-    <string name="button_chinese">中文</string>
+    <string name="button_chinese">繁體中文</string>
     <string name="button_japanese">日本語</string>
     <string name="title_activity_function_list">FunctionListActivity</string>
     <string name="consultant">Consultant</string>
@@ -13,5 +13,10 @@
     <string name="button_about">about</string>
     <string name="title_activity_splash">SplashActivity</string>
     <string name="title_activity_website">WebsiteActivity</string>
+    <string name="title_activity_about">AboutActivity</string>
+    <string name="our_story_history_title">History</string>
+    <string name="our_story_history_content">Fragrance Du Bois is a niche luxury perfume house born from the richest essences of nature, and crafted by fifth generation perfumers from the 17th Century French tradition of Grasse. Our exquisite fragrances will transport you to yesteryear, invoking long lost memories, fleeting feelings, and bursts of joy. Our beguiling creations will strike a chord with your deepest, most intimate and unique selves.</string>
+    <string name="functions">Functions</string>
+    <string name="title_our_story">Our Story</string>
 
 </resources>

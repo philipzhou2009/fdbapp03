@@ -8,11 +8,11 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:supportsRtl="true">
         <activity
             android:name=".SplashActivity"
-            android:label="@string/title_activity_splash">
+            android:label="@string/title_activity_splash"
+            android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,10 +24,15 @@
             android:label="@string/app_name" />
         <activity
             android:name=".FunctionListActivity"
-            android:label="@string/title_activity_function_list" />
+            android:label="@string/functions" />
         <activity
             android:name=".WebsiteActivity"
-            android:label="@string/title_activity_website"></activity>
+            android:label="@string/title_activity_website" />
+        <activity
+            android:name=".AboutActivity"
+            android:label="@string/title_our_story"
+            />
+        <activity android:name=".PersonalityActivity"></activity>
     </application>
 
 </manifest>

@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center">
+    android:gravity="center"
+    android:orientation="vertical"
+    style="@style/FDBWindowStyle"
+    >
 
     <ImageView
-        android:layout_width="230dp"
-        android:layout_height="310dp"
         android:id="@+id/imageView"
+        android:layout_width="406px"
+        android:layout_height="240px"
         android:layout_gravity="center"
-        android:src="@drawable/fdb_logo_gold_effect_hr_2"
-        />
+        android:src="@drawable/fdb_logo_w406" />
 </LinearLayout>

@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 
 import java.util.Locale;
@@ -17,9 +18,9 @@ public class MyActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Utils.setWindowFullScreenNoTitle(this);
+
         setContentView(R.layout.activity_my);
-
-
 
         final Button buttonFr = (Button) findViewById(R.id.buttonFr);
         buttonFr.setOnClickListener(new View.OnClickListener() {

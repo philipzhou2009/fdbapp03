@@ -5,35 +5,34 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 
 public class SplashActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        Utils.setWindowFullScreenNoTitle(this);
+
         setContentView(R.layout.activity_splash);
 
-        //FontsOverride.setDefaultFont(this, "DEFAULT", "fonts/Adobe Garamond Regular.ttf");
-        //FontsOverride.setDefaultFont(this, "DEFAULT_BOLD", "fonts/Adobe Garamond Bold.ttf");
-        //FontsOverride.setAllDefaultFonts(this);
-
         Thread logoTimer = new Thread() {
-            public void run(){
-                try{
+            public void run() {
+                try {
                     int logoTimer = 0;
-                    while(logoTimer < 1500){
+                    while (logoTimer < 2000) {
                         sleep(100);
-                        logoTimer = logoTimer +100;
-                    };
+                        logoTimer = logoTimer + 100;
+                    }
+                    ;
                     startActivity(new Intent(SplashActivity.this, MyActivity.class));
-                }
-
-                catch (InterruptedException e) {
+                } catch (InterruptedException e) {
                     // TODO Auto-generated catch block
                     e.printStackTrace();
-                }
-
-                finally{
+                } finally {
                     finish();
                 }
             }

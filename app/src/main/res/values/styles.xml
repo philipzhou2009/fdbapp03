@@ -3,13 +3,26 @@
     <!-- Base application theme. -->
     <!--<style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">-->
     <style name="AppTheme" parent="android:Theme.Material.NoActionBar">
-
         <!-- Customize your theme here. -->
-
     </style>
 
-    <style name="CKButton">
-        <item name="android:layout_width">200dp</item>
-        <item name="android:layout_height">60dp</item>
+    <style name="AppTheme2" parent="android:Theme.Material">
+        <item name="android:actionBarStyle">@style/FDBActionBar</item>
+        <item name="actionBarStyle">@style/FDBActionBar</item>
+    </style>
+
+
+    <style name="FDBButtonStyle">
+        <item name="android:layout_width">240dp</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:textSize">30dp</item>
+    </style>
+
+    <style name="FDBWindowStyle">
+        <item name="android:background">@color/black</item>
+    </style>
+
+    <style name="FDBActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">@color/black</item>
     </style>
 </resources>
