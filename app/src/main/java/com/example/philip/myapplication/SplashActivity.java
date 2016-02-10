@@ -28,7 +28,7 @@ public class SplashActivity extends Activity {
                         logoTimer = logoTimer + 100;
                     }
                     ;
-                    startActivity(new Intent(SplashActivity.this, MyActivity.class));
+                    startActivity(new Intent(SplashActivity.this, LocalesActivity.class));
                 } catch (InterruptedException e) {
                     // TODO Auto-generated catch block
                     e.printStackTrace();

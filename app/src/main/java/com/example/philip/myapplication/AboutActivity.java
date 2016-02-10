@@ -1,24 +1,21 @@
 package com.example.philip.myapplication;
 
-import android.app.ActionBar;
 import android.os.Bundle;
-import android.app.Activity;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 
-public class AboutActivity extends Activity {
+public class AboutActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         Utils.setWindowFullScreen(this);
 
-        ActionBar actionBar = getActionBar();
-        if(actionBar != null) {
-            actionBar.setDisplayHomeAsUpEnabled(true);
-            //actionBar.set
-        }
-
         setContentView(R.layout.activity_about);
+
+        Utils.enableAppbarWithBack(this);
     }
 
 }

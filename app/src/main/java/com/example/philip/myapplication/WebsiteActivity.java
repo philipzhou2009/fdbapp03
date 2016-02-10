@@ -39,8 +39,7 @@ public class WebsiteActivity extends Activity {
             }
         });
 
-
-
+        
         webview.loadUrl("http://fragrancedubois.com");
     }
 

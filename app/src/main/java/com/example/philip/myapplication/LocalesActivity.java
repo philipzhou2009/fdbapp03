@@ -13,12 +13,14 @@ import android.widget.Button;
 
 import java.util.Locale;
 
-public class MyActivity extends Activity {
+public class LocalesActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Utils.setWindowFullScreenNoTitle(this);
+
+        Utils.setLocale(this, "en");
 
         setContentView(R.layout.activity_my);
 
