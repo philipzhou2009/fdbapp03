@@ -12,7 +12,7 @@
     <string name="website">Website</string>
     <string name="button_about">about</string>
     <string name="title_activity_splash">SplashActivity</string>
-    <string name="title_activity_website">WebsiteActivity</string>
+    <string name="title_activity_website">Fragrance Du Bois WebSite</string>
     <string name="title_activity_about">AboutActivity</string>
     <string name="our_story_history_title">History</string>
     <string name="our_story_history_content">Fragrance Du Bois is a niche luxury perfume house born from the richest essences of nature, and crafted by fifth generation perfumers from the 17th Century French tradition of Grasse. Our exquisite fragrances will transport you to yesteryear, invoking long lost memories, fleeting feelings, and bursts of joy. Our beguiling creations will strike a chord with your deepest, most intimate and unique selves.</string>
@@ -22,5 +22,6 @@
     <string name="our_story_inspiration_content">Our inspiration stems from the beauty and purity of nature itself. At the heart of all Fragrance Du Bois’ creations is our signature Oud that exudes the ultimate in luxury, being both distinctive and unique. All the Oud used by Fragrance Du Bois is produced by Asia Plantation Capital, and is guaranteed to be ethically and sustainably sourced.</string>
     <string name="our_story_expertise_title">Expertise</string>
     <string name="our_story_expertise_content">Our perfumers are artisans who revel in their craft - masters of capturing the essence of nature - carefully selecting each note and blending it to perfection with others to compose a shimmering symphony of scent.</string>
+    <string name="title_activity_personality">Personalities Of Yourself</string>
 
 </resources>

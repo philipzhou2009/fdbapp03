@@ -1,11 +1,13 @@
 package com.example.philip.myapplication;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
@@ -27,7 +29,7 @@ public class Utils {
                 activity.getBaseContext().getResources().getDisplayMetrics());
     }
 
-
+    // UI
     static public void setWindowFullScreenNoTitle(Activity activity) {
         // Make this activity, full screen
         activity.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
@@ -54,5 +56,11 @@ public class Utils {
 
         // Enable the Up button
         ab.setDisplayHomeAsUpEnabled(true);
+    }
+
+    // tools
+    static public void startSomeActivity(View v, Class c, Activity activity) {
+        Intent intent = new Intent(v.getContext(), c);
+        activity.startActivity(intent);
     }
 }

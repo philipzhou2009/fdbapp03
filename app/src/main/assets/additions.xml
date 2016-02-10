@@ -1,0 +1,266 @@
+<additions>
+    <addition>
+        <name>ORANGE</name>
+        <x>400</x>
+        <y>100</y>
+        <img>addition_orange</img>
+    </addition>
+    <addition>
+        <name>ORANGE</name>
+        <x>780</x>
+        <y>760</y>
+        <img>addition_orange</img>
+    </addition>
+
+    <addition>
+        <name>BASIL</name>
+        <x>320</x>
+        <y>190</y>
+        <img>addition_basil</img>
+    </addition>
+
+    <addition>
+        <name>CEDARWOOD</name>
+        <x>280</x>
+        <y>230</y>
+        <img>addition_cedarwood</img>
+    </addition>
+
+    <addition>
+        <name>ROSE</name>
+        <x>760</x>
+        <y>490</y>
+        <img>addition_rose</img>
+    </addition>
+
+    <addition>
+        <name>ROSE</name>
+        <x>550</x>
+        <y>900</y>
+        <img>addition_rose</img>
+    </addition>
+
+    <addition>
+        <name>ROSE</name>
+        <x>200</x>
+        <y>860</y>
+        <img>addition_rose</img>
+    </addition>
+
+    <addition>
+        <name>VANILLA</name>
+        <x>460</x>
+        <y>160</y>
+        <img>addition_vanilla</img>
+    </addition>
+
+    <addition>
+        <name>CALONE</name>
+        <x>760</x>
+        <y>280</y>
+        <img>addition_calone</img>
+    </addition>
+    <addition>
+        <name>CALONE</name>
+        <x>720</x>
+        <y>700</y>
+        <img>addition_calone</img>
+    </addition>
+
+    <!-- notes -->
+    <addition>
+        <name>White Flowers</name>
+        <x>0</x>
+        <y>0</y>
+        <img>notes_whiteflower</img>
+    </addition>
+
+    <addition>
+        <name>Monoi</name>
+        <x>0</x>
+        <y>0</y>
+        <img>notes_monoi</img>
+    </addition>
+
+    <addition>
+        <name>Tonka Bean</name>
+        <x>0</x>
+        <y>0</y>
+        <img>notes_tonkabean</img>
+    </addition>
+
+    <addition>
+        <name>Ginger</name>
+        <x>0</x>
+        <y>0</y>
+        <img>notes_ginger</img>
+    </addition>
+
+    <addition>
+        <name>Pineapple</name>
+        <x>0</x>
+        <y>0</y>
+        <img>notes_pineapple</img>
+    </addition>
+
+    <addition>
+        <name>Lemon</name>
+        <x>0</x>
+        <y>0</y>
+        <img>notes_lemon</img>
+    </addition>
+
+    <addition>
+        <name>Musk</name>
+        <x>0</x>
+        <y>0</y>
+        <img>notes_musk</img>
+    </addition>
+
+    <addition>
+        <name>Mandarin</name>
+        <x>0</x>
+        <y>0</y>
+        <img>notes_mandarin</img>
+    </addition>
+
+    <addition>
+        <name>Neroli</name>
+        <x>0</x>
+        <y>0</y>
+        <img>notes_neroli</img>
+    </addition>
+
+    <addition>
+        <name>Styrax</name>
+        <x>0</x>
+        <y>0</y>
+        <img>notes_styrax</img>
+    </addition>
+
+    <addition>
+        <name>Coriander Seeds</name>
+        <x>0</x>
+        <y>0</y>
+        <img>notes_corianderseed</img>
+    </addition>
+
+    <addition>
+        <name>Cistus</name>
+        <x>0</x>
+        <y>0</y>
+        <img>notes_cistus</img>
+    </addition>
+
+    <addition>
+        <name>Bergamot</name>
+        <x>0</x>
+        <y>0</y>
+        <img>notes_bergamot</img>
+    </addition>
+
+    <addition>
+        <name>Amber</name>
+        <x>0</x>
+        <y>0</y>
+        <img>notes_amber</img>
+    </addition>
+
+    <addition>
+        <name>Frankincense</name>
+        <x>0</x>
+        <y>0</y>
+        <img>notes_frankincense</img>
+    </addition>
+
+    <addition>
+        <name>Benzoin</name>
+        <x>0</x>
+        <y>0</y>
+        <img>notes_benzoin</img>
+    </addition>
+
+    <addition>
+        <name>Black Pepper</name>
+        <x>0</x>
+        <y>0</y>
+        <img>notes_pepper</img>
+    </addition>
+
+    <addition>
+        <name>Cardamom</name>
+        <x>0</x>
+        <y>0</y>
+        <img>notes_cardamom</img>
+    </addition>
+
+    <addition>
+        <name>Sandalwood</name>
+        <x>0</x>
+        <y>0</y>
+        <img>notes_sandalwood</img>
+    </addition>
+
+    <addition>
+        <name>Elemi</name>
+        <x>0</x>
+        <y>0</y>
+        <img>notes_elemi</img>
+    </addition>
+
+    <addition>
+        <name>Saffron</name>
+        <x>0</x>
+        <y>0</y>
+        <img>notes_saffron</img>
+    </addition>
+
+    <addition>
+        <name>Nutmeg</name>
+        <x>0</x>
+        <y>0</y>
+        <img>notes_nutmeg</img>
+    </addition>
+
+    <addition>
+        <name>Orange Blossom</name>
+        <x>0</x>
+        <y>0</y>
+        <img>notes_orangeblossom</img>
+    </addition>
+
+    <addition>
+        <name>Coconut</name>
+        <x>0</x>
+        <y>0</y>
+        <img>notes_coconut</img>
+    </addition>
+
+    <addition>
+        <name>Pink Pepper</name>
+        <x>0</x>
+        <y>0</y>
+        <img>notes_pinkpepper</img>
+    </addition>
+
+    <addition>
+        <name>Geranium</name>
+        <x>0</x>
+        <y>0</y>
+        <img>notes_geranium</img>
+    </addition>
+    <addition>
+        <name>Myrrh Essence</name>
+        <x>0</x>
+        <y>0</y>
+        <img>notes_encensmyrrhe</img>
+    </addition>
+
+    <addition>
+        <name>Ylang Ylang</name>
+        <x>0</x>
+        <y>0</y>
+        <img>notes_ylangylang</img>
+    </addition>
+
+</additions>

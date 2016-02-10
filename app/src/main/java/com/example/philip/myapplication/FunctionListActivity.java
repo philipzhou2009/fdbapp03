@@ -33,6 +33,14 @@ public class FunctionListActivity extends AppCompatActivity {
                 startAboutActivity(v);
             }
         });
+
+        final Button btnConsultant = (Button) findViewById(R.id.btnConsultant);
+        btnConsultant.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                //Utils.startSomeActivity(v, PersonalityActivity.class, );
+                startSomeActivity(v, PersonalityActivity.class);
+            }
+        });
     }
 
     @Override
@@ -57,6 +65,11 @@ public class FunctionListActivity extends AppCompatActivity {
         Log.i("MyActivity", "startAboutActivity");
 
         Intent intent = new Intent(v.getContext(), AboutActivity.class);
+        startActivity(intent);
+    }
+
+    public void startSomeActivity(View v, Class c) {
+        Intent intent = new Intent(v.getContext(), c);
         startActivity(intent);
     }
 }
