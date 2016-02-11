@@ -1,11 +1,13 @@
 package com.example.philip.myapplication;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -34,6 +36,16 @@ public class PersonalityActivity extends AppCompatActivity {
 
         Utils.enableAppbarWithBack(this);
 
+        ActionBar bar = getSupportActionBar();
+        bar.setCustomView(getLayoutInflater().inflate(R.layout.appbar_personality, null),
+                new ActionBar.LayoutParams(
+                        ActionBar.LayoutParams.WRAP_CONTENT,
+                        ActionBar.LayoutParams.WRAP_CONTENT,
+                        Gravity.CENTER
+                )
+        );
+        bar.setDisplayShowCustomEnabled(true);
+
         mViewConinue = (View) findViewById(R.id.selectioncontinue);
 
         try {
@@ -57,8 +69,10 @@ public class PersonalityActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        //getMenuInflater().inflate(R.menu.selections, menu);
+        /*
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_my, menu);
+        */
         return true;
     }
 
@@ -87,6 +101,10 @@ public class PersonalityActivity extends AppCompatActivity {
         } else {
             mViewConinue.setVisibility(View.INVISIBLE);
         }
+    }
+
+    public void updateAppbar() {
+        //this.getActionBar();
     }
 
     public void startColorWheel(View view) {

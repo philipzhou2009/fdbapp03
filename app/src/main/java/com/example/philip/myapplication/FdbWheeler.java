@@ -7,12 +7,13 @@ import android.graphics.Typeface;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 /**
  * Created by philip on 12/10/14.
  */
-public class FdbWheeler implements Comparable<FdbWheeler>{
+public class FdbWheeler implements Comparable<FdbWheeler> {
 
     //static float mScreenRatioW = 1.0f;
     //static float mScreenRatioH = 1.0f;
@@ -53,7 +54,8 @@ public class FdbWheeler implements Comparable<FdbWheeler>{
         }
     }
 
-    public View createGridSelection(final PersonalityActivity context) {
+    /*
+    public View createGridSelection0(final PersonalityActivity context) {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         View grid = new View(context);
@@ -88,6 +90,42 @@ public class FdbWheeler implements Comparable<FdbWheeler>{
 
         return grid;
     }
+    */
+
+    public View createGridSelection(final PersonalityActivity context) {
+        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
+        View grid = inflater.inflate(R.layout.grid_selection, null);
+        Button btn = (Button) grid.findViewById(R.id.grid_button);
+        btn.setText(mName);
+
+        mGridSelection = grid;
+
+        final FdbWheeler wheeler = this;
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i("FdbWheeler", "btn onClick");
+                wheeler.mFlag = wheeler.mFlag ? false : true;
+                Button btn = (Button) v.findViewById(R.id.grid_button);
+                setButtonState(btn, wheeler.mFlag);
+                context.showColorWheelButton();
+            }
+        });
+
+        return grid;
+    }
+
+    private void setButtonState(Button btn, boolean selected) {
+        if (selected) {
+            btn.setTextColor(btn.getResources().getColor(R.color.black));
+            btn.setBackgroundResource(R.drawable.button_personality_selected);
+        } else {
+            btn.setTextColor(btn.getResources().getColor(R.color.gold));
+            btn.setBackgroundResource(R.drawable.button_personality);
+        }
+
+    }
 
     public TextView createTextView(final Activity activity) {
         TextView tv = new TextView(activity);
@@ -121,7 +159,9 @@ public class FdbWheeler implements Comparable<FdbWheeler>{
         }
     }
 
-    public int compareTo(FdbWheeler other){
+    public int compareTo(FdbWheeler other) {
         return mName.compareTo(other.mName);
     }
+
+
 }

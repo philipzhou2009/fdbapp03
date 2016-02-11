@@ -1,16 +1,10 @@
 package com.example.philip.myapplication;
 
-import android.app.Activity;
 import android.content.Context;
-import android.graphics.Color;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.GridView;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import java.util.List;
 
@@ -66,50 +60,13 @@ public class ImageAdapter extends BaseAdapter {
         return 0;
     }
 
-    // create a new ImageView for each item referenced by the Adapter
-    public View getView0(int position, View convertView, ViewGroup parent) {
-        View grid;
-        LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-
-        if (convertView == null) {  // if it's not recycled, initialize some attributes
-
-            grid = new View(mContext);
-            grid = inflater.inflate(R.layout.grid_selection, null);
-            TextView textView = (TextView) grid.findViewById(R.id.grid_text);
-            //ImageView imageView = (ImageView) grid.findViewById(R.id.grid_image);
-
-            String title;
-            int thumbId;
-            if (position < mTitles.length) {
-                title = mTitles[position];
-                //thumbId = mThumbIds[position];
-            } else {
-                title = "Color Wheel";
-                Integer resId = FdbHelper.getId("colour_wheel_draft_rev_white_640", R.drawable.class);
-                //thumbId = resId;
-            }
-
-            textView.setText(title);
-            //textView.setTextSize(16f);
-            textView.setTextColor(Color.rgb(0x89, 0x72, 0x3a));
-            //imageView.setImageResource(thumbId);
-
-        } else {
-            grid = (LinearLayout) convertView;
-        }
-
-        return grid;
-    }
-
     public View getView(int position, View convertView, ViewGroup parent) {
+        //LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
         View grid;
-        LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-
         if (convertView == null) {  // if it's not recycled, initialize some attributes
-
             FdbWheeler wheeler = mFdbWheelers.get(position);
             grid = wheeler.createGridSelection(mActivity);
-
         } else {
             grid = (LinearLayout) convertView;
         }

@@ -1,26 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:gravity="center">
+    android:gravity="center"
+    android:orientation="vertical">
     <!--
     <ImageView
         android:id="@+id/grid_image"
         android:layout_width="400dp"
         android:layout_height="312dp">
     </ImageView>
-    -->
     <TextView
         android:id="@+id/grid_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="24sp"
-        android:textColor="#ff89723a"
-        android:textStyle="normal"
         android:padding="10dp"
-        android:typeface="monospace">
-    </TextView>
+        android:textColor="#ff89723a"
+        android:textSize="24sp"
+        android:textStyle="normal"
+        android:typeface="monospace" />
+    -->
+    <Button
+        android:id="@+id/grid_button"
+        style="@style/FDBButtonPersonalityStyle"
+        android:background="@drawable/button_personality"
+        android:text="@string/personality" />
+
+
 </LinearLayout>

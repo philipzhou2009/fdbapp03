@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="@color/black">
+
+    <TextView
+        android:id="@+id/barCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:text="@string/website"
+        android:textColor="@color/white"
+        android:gravity="center"
+        />
+
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="18dp"
+        android:src="@drawable/ic_arrow_forward_white_48dp"
+        android:background="@null"
+        android:scaleType="fitXY"
+        android:visibility="visible"
+        />
+
+</RelativeLayout>
