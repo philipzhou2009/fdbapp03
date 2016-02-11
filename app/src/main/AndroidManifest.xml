@@ -24,7 +24,7 @@
             android:label="@string/app_name" />
         <activity
             android:name=".FunctionListActivity"
-            android:label="@string/functions"
+            android:label="@string/features"
             android:parentActivityName=".LocalesActivity" />
         <activity
             android:name=".WebsiteActivity"

@@ -2,31 +2,38 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
-    android:background="@color/black">
+    android:background="@color/black"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/barTitle"
+        style="@style/FDBAppBarPersonalityStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:text="@string/personality"
+        android:textColor="@color/white"
+        />
 
     <TextView
         android:id="@+id/barCounter"
+        style="@style/FDBAppBarPersonalityStyle"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_centerInParent="true"
+        android:layout_alignParentRight="true"
         android:text="@string/website"
-        android:textColor="@color/white"
-        android:gravity="center"
-        />
+        android:textColor="@color/white" />
 
 
     <ImageButton
         android:id="@+id/imageButton"
+        style="@style/FDBAppBarPersonalityStyle"
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"
-        android:layout_marginRight="18dp"
-        android:src="@drawable/ic_arrow_forward_white_48dp"
         android:background="@null"
         android:scaleType="fitXY"
-        android:visibility="visible"
-        />
+        android:src="@drawable/ic_arrow_forward_white_48dp"
+        android:visibility="invisible" />
 
 </RelativeLayout>

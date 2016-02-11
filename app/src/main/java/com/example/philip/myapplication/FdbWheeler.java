@@ -109,7 +109,8 @@ public class FdbWheeler implements Comparable<FdbWheeler> {
                 wheeler.mFlag = wheeler.mFlag ? false : true;
                 Button btn = (Button) v.findViewById(R.id.grid_button);
                 setButtonState(btn, wheeler.mFlag);
-                context.showColorWheelButton();
+                //context.showColorWheelButton();
+                context.updateAppbar();
             }
         });
 
@@ -121,7 +122,7 @@ public class FdbWheeler implements Comparable<FdbWheeler> {
             btn.setTextColor(btn.getResources().getColor(R.color.black));
             btn.setBackgroundResource(R.drawable.button_personality_selected);
         } else {
-            btn.setTextColor(btn.getResources().getColor(R.color.gold));
+            btn.setTextColor(btn.getResources().getColor(R.color.white));
             btn.setBackgroundResource(R.drawable.button_personality);
         }
 

@@ -22,4 +22,5 @@
     <string name="our_story_expertise_title">Expertise</string>
     <string name="title_activity_personality">Choose most suitable 3 personalities</string>
     <string name="personality">Personality</string>
+    <string name="features">Features</string>
 </resources>

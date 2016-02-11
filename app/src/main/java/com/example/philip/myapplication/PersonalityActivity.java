@@ -12,6 +12,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.GridView;
+import android.widget.ImageButton;
+import android.widget.TextView;
 
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -37,14 +39,27 @@ public class PersonalityActivity extends AppCompatActivity {
         Utils.enableAppbarWithBack(this);
 
         ActionBar bar = getSupportActionBar();
-        bar.setCustomView(getLayoutInflater().inflate(R.layout.appbar_personality, null),
-                new ActionBar.LayoutParams(
-                        ActionBar.LayoutParams.WRAP_CONTENT,
-                        ActionBar.LayoutParams.WRAP_CONTENT,
-                        Gravity.CENTER
-                )
-        );
-        bar.setDisplayShowCustomEnabled(true);
+        if(bar != null) {
+
+            bar.setCustomView(getLayoutInflater().inflate(R.layout.appbar_personality, null),
+                    new ActionBar.LayoutParams(
+                            ActionBar.LayoutParams.MATCH_PARENT,
+                            ActionBar.LayoutParams.WRAP_CONTENT,
+                            Gravity.RIGHT
+                    )
+            );
+
+            bar.setDisplayShowCustomEnabled(true);
+        }
+
+        /*
+        ImageButton ib = (ImageButton) findViewById(R.id.imageButton);
+        ib.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Log.i("imageButton", "go to color wheel");
+            }
+        });
+        */
 
         mViewConinue = (View) findViewById(R.id.selectioncontinue);
 
@@ -65,14 +80,11 @@ public class PersonalityActivity extends AppCompatActivity {
         GridView gridview = (GridView) findViewById(R.id.gridview);
         gridview.setAdapter(new ImageAdapter(this, mFdbWheelers));
     }
-
-
+    
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        /*
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu_my, menu);
-        */
+        //inflater.inflate(R.menu.menu_my, menu);
         return true;
     }
 
@@ -82,9 +94,11 @@ public class PersonalityActivity extends AppCompatActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
+        /*
         if (id == R.id.action_settings) {
             return true;
         }
+        */
         return super.onOptionsItemSelected(item);
     }
 
@@ -104,7 +118,34 @@ public class PersonalityActivity extends AppCompatActivity {
     }
 
     public void updateAppbar() {
-        //this.getActionBar();
+        ActionBar actionBar = this.getSupportActionBar();
+
+        int count = 0;
+        for (FdbWheeler wheeler : mFdbWheelers) {
+
+            if (wheeler.mFlag) {
+                count++;
+            }
+
+        }
+
+        TextView tv = (TextView) findViewById(R.id.barCounter);
+        if (tv != null) {
+            tv.setText("" + count);
+
+            if(count == 3)
+            {
+                tv.setVisibility(View.GONE);
+                ImageButton ib = (ImageButton) findViewById(R.id.imageButton);
+                ib.setVisibility(View.VISIBLE);
+            }
+            else
+            {
+
+            }
+        }
+
+
     }
 
     public void startColorWheel(View view) {
