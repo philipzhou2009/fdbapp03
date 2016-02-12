@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageButton;
@@ -28,6 +29,7 @@ public class PersonalityActivity extends AppCompatActivity {
     public List<FdbWheeler> mFdbWheelers;
     public Button mShowCW;
     public View mViewConinue;
+    public int mSelected;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +41,7 @@ public class PersonalityActivity extends AppCompatActivity {
         Utils.enableAppbarWithBack(this);
 
         ActionBar bar = getSupportActionBar();
-        if(bar != null) {
+        if (bar != null) {
 
             bar.setCustomView(getLayoutInflater().inflate(R.layout.appbar_personality, null),
                     new ActionBar.LayoutParams(
@@ -52,14 +54,6 @@ public class PersonalityActivity extends AppCompatActivity {
             bar.setDisplayShowCustomEnabled(true);
         }
 
-        /*
-        ImageButton ib = (ImageButton) findViewById(R.id.imageButton);
-        ib.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Log.i("imageButton", "go to color wheel");
-            }
-        });
-        */
 
         mViewConinue = (View) findViewById(R.id.selectioncontinue);
 
@@ -79,8 +73,19 @@ public class PersonalityActivity extends AppCompatActivity {
 
         GridView gridview = (GridView) findViewById(R.id.gridview);
         gridview.setAdapter(new ImageAdapter(this, mFdbWheelers));
+
+
+        ImageButton ib = (ImageButton) findViewById(R.id.imageButton);
+        ib.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Log.i("imageButton", "go to color wheel");
+                startColorWheel();
+            }
+        });
+
+        updateAppbar();
     }
-    
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -118,33 +123,31 @@ public class PersonalityActivity extends AppCompatActivity {
     }
 
     public void updateAppbar() {
-        ActionBar actionBar = this.getSupportActionBar();
-
-        int count = 0;
+        int count = 3;
         for (FdbWheeler wheeler : mFdbWheelers) {
-
             if (wheeler.mFlag) {
-                count++;
+                count--;
             }
-
         }
 
         TextView tv = (TextView) findViewById(R.id.barCounter);
-        if (tv != null) {
+        ViewGroup.MarginLayoutParams params = (ViewGroup.MarginLayoutParams) tv.getLayoutParams();
+        ImageButton ib = (ImageButton) findViewById(R.id.imageButton);
+
+        int iDp = 24;
+        int iVi = View.INVISIBLE;
+        if (count == 0) {
+            iDp = 55;
+            iVi = View.VISIBLE;
+            tv.setText(R.string.go_to_colorwheel);
+        }
+        else
+        {
             tv.setText("" + count);
-
-            if(count == 3)
-            {
-                tv.setVisibility(View.GONE);
-                ImageButton ib = (ImageButton) findViewById(R.id.imageButton);
-                ib.setVisibility(View.VISIBLE);
-            }
-            else
-            {
-
-            }
         }
 
+        params.rightMargin = Utils.convertDpToPx(this.getBaseContext(), iDp);
+        ib.setVisibility(iVi);
 
     }
 
@@ -159,6 +162,21 @@ public class PersonalityActivity extends AppCompatActivity {
         }
 
         Intent myIntent = new Intent(view.getContext(), ColorWheel.class);
+        myIntent.putExtra("selections", strList);
+        startActivityForResult(myIntent, 0);
+    }
+
+    public void startColorWheel() {
+
+        ArrayList<String> strList = new ArrayList();
+        for (FdbWheeler wheeler : mFdbWheelers) {
+            if (wheeler.mFlag == true) {
+                strList.add(wheeler.mName);
+                //Log.e("fdb", wheeler.mName);
+            }
+        }
+
+        Intent myIntent = new Intent(this.getBaseContext(), ColorWheel.class);
         myIntent.putExtra("selections", strList);
         startActivityForResult(myIntent, 0);
     }

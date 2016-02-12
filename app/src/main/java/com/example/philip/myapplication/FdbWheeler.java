@@ -106,11 +106,33 @@ public class FdbWheeler implements Comparable<FdbWheeler> {
             @Override
             public void onClick(View v) {
                 Log.i("FdbWheeler", "btn onClick");
-                wheeler.mFlag = wheeler.mFlag ? false : true;
+
                 Button btn = (Button) v.findViewById(R.id.grid_button);
-                setButtonState(btn, wheeler.mFlag);
-                //context.showColorWheelButton();
-                context.updateAppbar();
+
+                int iVal = wheeler.mFlag ? -1 : 1;
+
+                if((context.mSelected == 3 && iVal == -1) || (context.mSelected < 3) )
+                {
+                    context.mSelected += iVal;
+                    wheeler.mFlag = wheeler.mFlag ? false : true;
+                    setButtonState(btn, wheeler.mFlag);
+                    context.updateAppbar();
+
+
+                }
+
+                /*
+                if(context.mSelected < 3)
+                {
+                    context.mSelected += iVal;
+                    wheeler.mFlag = wheeler.mFlag ? false : true;
+                    setButtonState(btn, wheeler.mFlag);
+                    //context.showColorWheelButton();
+                    context.updateAppbar();
+
+                }
+                */
+
             }
         });
 

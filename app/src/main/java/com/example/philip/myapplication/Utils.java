@@ -1,12 +1,15 @@
 package com.example.philip.myapplication;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -62,5 +65,18 @@ public class Utils {
     static public void startSomeActivity(View v, Class c, Activity activity) {
         Intent intent = new Intent(v.getContext(), c);
         activity.startActivity(intent);
+    }
+
+    // dp to px
+    static public int convertDpToPx(Context mContext, int iDp)
+    {
+        Resources r = mContext.getResources();
+        int px = (int) TypedValue.applyDimension(
+                TypedValue.COMPLEX_UNIT_DIP,
+                iDp,
+                r.getDisplayMetrics()
+        );
+
+        return px;
     }
 }

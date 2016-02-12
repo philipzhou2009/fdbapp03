@@ -21,9 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_alignParentRight="true"
-        android:text="@string/website"
         android:textColor="@color/white" />
-
 
     <ImageButton
         android:id="@+id/imageButton"

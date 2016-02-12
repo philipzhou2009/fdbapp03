@@ -25,5 +25,7 @@
     <string name="title_activity_personality">Personalities Of Yourself</string>
     <string name="personality">Personality</string>
     <string name="features">Features</string>
+    <string name="go_to_colorwheel">Color Wheel</string>
+    <string name="title_color_wheel">Color Wheel</string>
 
 </resources>
