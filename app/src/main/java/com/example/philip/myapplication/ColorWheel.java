@@ -3,8 +3,10 @@ package com.example.philip.myapplication;
 import android.content.Intent;
 import android.graphics.Point;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.Display;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -60,12 +62,26 @@ public class ColorWheel extends AppCompatActivity {
 
         FdbAddition.mScreenHeight = height;
 
+        TypedValue tvv = new TypedValue();
+        if (getTheme().resolveAttribute(android.R.attr.actionBarSize, tvv, true))
+        {
+            int actionBarHeight = TypedValue.complexToDimensionPixelSize(tvv.data,getResources().getDisplayMetrics());
+            Log.e("actionBarHeight", "" + actionBarHeight);
+
+        }
+
+        ActionBar bar = getSupportActionBar();
+        Log.e("bar.getHeight()", "" + bar.getHeight());
+
+
+        /*
         ImageView bgCw = (ImageView) findViewById(R.id.bg_colorwheel);
         int bgCwWidth = bgCw.getWidth();
         int bgCwHeight = bgCw.getHeight();
 
         Log.e("bg_colorwheel width", "" + bgCwWidth);
         Log.e("bg_colorwheel height", "" + bgCwHeight);
+        */
 
         /*
         DisplayMetrics displayMetrics = this.getResources().getDisplayMetrics();
@@ -132,6 +148,20 @@ public class ColorWheel extends AppCompatActivity {
         for (FdbAddition noteObj : mAdditions) {
             // Log.e("fcw, noteObj.mName=", "|"+ noteObj.mName + "|");
         }
+
+    }
+
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        //Here you can get the size!
+
+        ImageView bgCw = (ImageView) findViewById(R.id.bg_colorwheel);
+        int bgCwWidth = bgCw.getWidth();
+        int bgCwHeight = bgCw.getHeight();
+
+        Log.e("bg_colorwheel width", "" + bgCwWidth);
+        Log.e("bg_colorwheel height", "" + bgCwHeight);
 
     }
 
