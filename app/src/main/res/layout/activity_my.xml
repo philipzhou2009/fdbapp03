@@ -5,15 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:configChanges="keyboardHidden|orientation"
-    android:screenOrientation="landscape"
-    >
+    android:screenOrientation="landscape">
 
-    <RelativeLayout
-        android:id="@+id/childLayout"
-        android:layout_width="match_parent"
-        android:layout_height="108dp"
-        android:layout_centerInParent="true"
-        android:background="@drawable/flower_repeat"></RelativeLayout>
+    <include layout="@layout/bg_general" />
+
 
     <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
 

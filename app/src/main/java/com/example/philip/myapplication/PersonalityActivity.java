@@ -55,7 +55,7 @@ public class PersonalityActivity extends AppCompatActivity {
         }
 
 
-        mViewConinue = (View) findViewById(R.id.selectioncontinue);
+        //mViewConinue = (View) findViewById(R.id.selectioncontinue);
 
         try {
             //List<PerfumeXmlParser.Entry> entries = loadPerfumeXml();

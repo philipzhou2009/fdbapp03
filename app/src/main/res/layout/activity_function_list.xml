@@ -7,12 +7,7 @@
 
     <include layout="@layout/appbar" />
 
-    <RelativeLayout
-        android:id="@+id/childLayout"
-        android:layout_width="match_parent"
-        android:layout_height="108dp"
-        android:layout_centerInParent="true"
-        android:background="@drawable/flower_repeat" />
+    <include layout="@layout/bg_general" />
 
     <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="wrap_content"
