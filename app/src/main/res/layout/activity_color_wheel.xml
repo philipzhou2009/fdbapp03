@@ -1,58 +1,86 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/colorWheelLayout"
+    style="@style/FDBWindowStyle"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.android.myapplication.ColorWheel"
-    android:background="#ffffffff"
-    android:id="@+id/colorWheelLayout">
+    android:layout_height="match_parent">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/colour_wheel_w1600"
-        android:scaleType="fitCenter"
-        android:contentDescription="bottles"
-        android:id="@+id/imageView2"
-        android:layout_centerVertical="true" />
+    <include layout="@layout/appbar"
+        android:id="@+id/include" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/include">
+
+        <ImageView
+            android:id="@+id/bg_colorwheel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/colour_wheel_w1600" />
+    </LinearLayout>
+
 
     <FrameLayout
+        android:id="@+id/fcwdimlayer"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:id="@+id/fcwdimlayer"
+        android:alpha="0"
         android:foreground="#000000"
-        android:alpha="0">
+        android:layout_below="@+id/include">
 
     </FrameLayout>
 
+    <!--
+        <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/colour_wheel_w1600" />
+
+    <FrameLayout
+        android:id="@+id/fcwdimlayer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:alpha="0"
+        android:foreground="#000000">
+
+    </FrameLayout>
+
+
     <LinearLayout
-        android:orientation="vertical"
+        android:id="@+id/fcwtapcustomize"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:gravity="center"
-        android:layout_marginBottom="30dp"
-        android:id="@+id/fcwtapcustomize"
         android:layout_alignParentRight="true"
-        android:layout_marginRight="30dp">
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginRight="30dp"
+        android:gravity="center"
+        android:orientation="vertical">
 
         <ImageView
+            android:id="@+id/flower_customize"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:id="@+id/flower_customize"
-            android:src="@drawable/icon"
-            android:onClick="showcustomization" />
+            android:onClick="showcustomization"
+            android:src="@drawable/icon" />
 
         <TextView
+            android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Customize"
-            android:id="@+id/textView2"
+            android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="#ff89723a"
             android:textSize="22sp"
             android:typeface="monospace" />
 
     </LinearLayout>
-
+    -->
 </RelativeLayout>

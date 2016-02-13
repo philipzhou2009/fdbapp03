@@ -1,22 +1,16 @@
 package com.example.philip.myapplication;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.content.res.AssetManager;
-import android.graphics.Color;
 import android.graphics.Point;
-import android.graphics.Typeface;
 import android.os.Bundle;
-import android.util.DisplayMetrics;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Display;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.TranslateAnimation;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
@@ -26,13 +20,11 @@ import android.widget.TextView;
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 
-public class ColorWheel extends Activity {
+public class ColorWheel extends AppCompatActivity {
 
     RelativeLayout mCWLayout;
     public ArrayList<String> mSelections;
@@ -46,7 +38,11 @@ public class ColorWheel extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Utils.setWindowFullScreen(this);
+
         setContentView(R.layout.activity_color_wheel);
+
+        Utils.enableAppbarWithBack(this);
 
         // get screen size in pixel
         Display display = getWindowManager().getDefaultDisplay();
@@ -57,12 +53,19 @@ public class ColorWheel extends Activity {
         Log.e("fcw screen width=", Integer.toString(width));
         Log.e("fcw screen height=", Integer.toString(height));
 
-        float mDiameterRatio = height/1600.0f;
+        float mDiameterRatio = height / 1600.0f;
         FdbHelper.mDiameterRatio = mDiameterRatio;
         FdbHelper.mScreenHeight = height;
         FdbHelper.mScreenWidth = width;
 
         FdbAddition.mScreenHeight = height;
+
+        ImageView bgCw = (ImageView) findViewById(R.id.bg_colorwheel);
+        int bgCwWidth = bgCw.getWidth();
+        int bgCwHeight = bgCw.getHeight();
+
+        Log.e("bg_colorwheel width", "" + bgCwWidth);
+        Log.e("bg_colorwheel height", "" + bgCwHeight);
 
         /*
         DisplayMetrics displayMetrics = this.getResources().getDisplayMetrics();
@@ -105,8 +108,7 @@ public class ColorWheel extends Activity {
                 for (String select : mSelections) {
                     if (wheeler.mName.equals(select)) {
                         TextView tv = wheeler.createTextView(this);
-                        // no show texts
-                        //colorWheelLayout.addView(tv);
+                        colorWheelLayout.addView(tv);
                         float coordsXY[] = {wheeler.mRealX, wheeler.mRealY};
                         coordsList.add(coordsXY);
                     }
@@ -127,9 +129,8 @@ public class ColorWheel extends Activity {
             colorWheelLayout.addView(view);
         }
 
-        for (FdbAddition noteObj: mAdditions)
-        {
-           // Log.e("fcw, noteObj.mName=", "|"+ noteObj.mName + "|");
+        for (FdbAddition noteObj : mAdditions) {
+            // Log.e("fcw, noteObj.mName=", "|"+ noteObj.mName + "|");
         }
 
     }
@@ -204,7 +205,7 @@ public class ColorWheel extends Activity {
         PerfumeXmlParser.Entry flowerEntry = new PerfumeXmlParser.Entry(perfume);
         flowerEntry.drawPerfume(this, mAdditions);
         LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(flowerWidth, flowerWidth);
-        ImageView flower = (ImageView)flowerEntry.mFlower;
+        ImageView flower = (ImageView) flowerEntry.mFlower;
         flower.setImageResource(R.drawable.icon);
         flower.setLayoutParams(layoutParams);
 
@@ -217,7 +218,7 @@ public class ColorWheel extends Activity {
     public void drawBloomingAnim(ArrayList<float[]> coordsList) {
 
         int flowerWidth = 25;
-        int fWidthHalf = flowerWidth/2;
+        int fWidthHalf = flowerWidth / 2;
 
         LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(flowerWidth, flowerWidth);
         final ImageView flower = new ImageView(this);
@@ -230,9 +231,9 @@ public class ColorWheel extends Activity {
         float[] coords2 = coordsList.get(2);
 
         ArrayList<TranslateAnimation> animations = new ArrayList<TranslateAnimation>();
-        final TranslateAnimation animation0 = new TranslateAnimation(coords0[0]-fWidthHalf, coords1[0]-fWidthHalf, coords0[1]-fWidthHalf, coords1[1]-fWidthHalf);
-        final TranslateAnimation animation1 = new TranslateAnimation(coords1[0]-fWidthHalf, coords2[0]-fWidthHalf, coords1[1]-fWidthHalf, coords2[1]-fWidthHalf);
-        final TranslateAnimation animation2 = new TranslateAnimation(coords2[0]-fWidthHalf, coords0[0]-fWidthHalf, coords2[1]-fWidthHalf, coords0[1]-fWidthHalf);
+        final TranslateAnimation animation0 = new TranslateAnimation(coords0[0] - fWidthHalf, coords1[0] - fWidthHalf, coords0[1] - fWidthHalf, coords1[1] - fWidthHalf);
+        final TranslateAnimation animation1 = new TranslateAnimation(coords1[0] - fWidthHalf, coords2[0] - fWidthHalf, coords1[1] - fWidthHalf, coords2[1] - fWidthHalf);
+        final TranslateAnimation animation2 = new TranslateAnimation(coords2[0] - fWidthHalf, coords0[0] - fWidthHalf, coords2[1] - fWidthHalf, coords0[1] - fWidthHalf);
 
         animations.add(animation0);
         animations.add(animation1);
@@ -245,13 +246,15 @@ public class ColorWheel extends Activity {
             animation.setFillAfter(true);
         }
 
-        animation0.setAnimationListener(new Animation.AnimationListener(){
+        animation0.setAnimationListener(new Animation.AnimationListener() {
             @Override
             public void onAnimationStart(Animation arg0) {
             }
+
             @Override
             public void onAnimationRepeat(Animation arg0) {
             }
+
             @Override
             public void onAnimationEnd(Animation arg0) {
                 //Log.e("fcw", "animation0 onAnimationEnd");
@@ -260,13 +263,15 @@ public class ColorWheel extends Activity {
             }
         });
 
-        animation1.setAnimationListener(new Animation.AnimationListener(){
+        animation1.setAnimationListener(new Animation.AnimationListener() {
             @Override
             public void onAnimationStart(Animation arg0) {
             }
+
             @Override
             public void onAnimationRepeat(Animation arg0) {
             }
+
             @Override
             public void onAnimationEnd(Animation arg0) {
                 //Log.e("fcw", "animation1 onAnimationEnd");
@@ -275,13 +280,15 @@ public class ColorWheel extends Activity {
             }
         });
 
-        animation2.setAnimationListener(new Animation.AnimationListener(){
+        animation2.setAnimationListener(new Animation.AnimationListener() {
             @Override
             public void onAnimationStart(Animation arg0) {
             }
+
             @Override
             public void onAnimationRepeat(Animation arg0) {
             }
+
             @Override
             public void onAnimationEnd(Animation arg0) {
                 //Log.e("fcw", "animation2 onAnimationEnd");
@@ -292,6 +299,7 @@ public class ColorWheel extends Activity {
         flower.startAnimation(animation0);
     }
 
+    /*
     public void showcustomization(View view) {
         //Log.e("fcw", "showcustomization");
 
@@ -319,6 +327,7 @@ public class ColorWheel extends Activity {
             }
         }
     }
+    */
 
     // http://stackoverflow.com/questions/5645081/android-touch-event-on-screen
     /*

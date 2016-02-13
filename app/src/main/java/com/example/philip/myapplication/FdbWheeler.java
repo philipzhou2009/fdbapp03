@@ -3,7 +3,6 @@ package com.example.philip.myapplication;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
-import android.graphics.Typeface;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -111,8 +110,7 @@ public class FdbWheeler implements Comparable<FdbWheeler> {
 
                 int iVal = wheeler.mFlag ? -1 : 1;
 
-                if((context.mSelected == 3 && iVal == -1) || (context.mSelected < 3) )
-                {
+                if ((context.mSelected == 3 && iVal == -1) || (context.mSelected < 3)) {
                     context.mSelected += iVal;
                     wheeler.mFlag = wheeler.mFlag ? false : true;
                     setButtonState(btn, wheeler.mFlag);
@@ -154,6 +152,7 @@ public class FdbWheeler implements Comparable<FdbWheeler> {
         TextView tv = new TextView(activity);
         tv.setText(mName);
         tv.setTextColor(Color.WHITE);
+        //tv.setTextColor();
         tv.setRotation(mDegree);
         tv.setShadowLayer((float) 0.06, 5, 5, Color.BLACK);
 
