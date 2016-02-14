@@ -67,7 +67,6 @@ public class ColorWheel extends AppCompatActivity {
         {
             int actionBarHeight = TypedValue.complexToDimensionPixelSize(tvv.data,getResources().getDisplayMetrics());
             Log.e("actionBarHeight", "" + actionBarHeight);
-
         }
 
         ActionBar bar = getSupportActionBar();
@@ -123,7 +122,8 @@ public class ColorWheel extends AppCompatActivity {
             } else {
                 for (String select : mSelections) {
                     if (wheeler.mName.equals(select)) {
-                        TextView tv = wheeler.createTextView(this);
+                        //TextView tv = wheeler.createTextView(this);
+                        TextView tv = wheeler.createHorizontalTextView(this);
                         colorWheelLayout.addView(tv);
                         float coordsXY[] = {wheeler.mRealX, wheeler.mRealY};
                         coordsList.add(coordsXY);
@@ -137,7 +137,7 @@ public class ColorWheel extends AppCompatActivity {
         colorWheelLayout.addView(triangle);
 
         this.drawFlower();
-        this.drawBloomingAnim(coordsList);
+        //this.drawBloomingAnim(coordsList);
 
         // draw invisible squares for perfumes
         for (PerfumeXmlParser.Entry perfume : mPerfumes) {

@@ -175,6 +175,30 @@ public class FdbWheeler implements Comparable<FdbWheeler> {
         return tv;
     }
 
+    public TextView createHorizontalTextView(final Activity activity) {
+        TextView tv = new TextView(activity);
+        tv.setText(mName);
+        //tv.setTextColor(Color.WHITE);
+        tv.setTextColor(activity.getResources().getColor(R.color.gold));
+        //tv.setRotation(mDegree);
+        tv.setShadowLayer((float) 0.06, 5, 5, Color.BLACK);
+
+        mRealY = FdbHelper.fdbHelperCalcYCoord(mYcoord + mLY);
+        mRealX = FdbHelper.fdbHelperCalcXCoord(mRealY, (mXcoord + mLX), (mYcoord + mLY));
+
+        tv.setX(mRealX);
+        tv.setY(mRealY);
+
+        mTV = tv;
+        mFlag = true;
+
+        Log.e("fcw, name=", mName);
+        Log.e("fcw, mRealX=", Float.toString(mRealX));
+        Log.e("fcw, mRealY=", Float.toString(mRealY));
+
+        return tv;
+    }
+
     public void hideTextView() {
         if (mFlag == true && mTV != null) {
             mTV.setVisibility(View.INVISIBLE);
