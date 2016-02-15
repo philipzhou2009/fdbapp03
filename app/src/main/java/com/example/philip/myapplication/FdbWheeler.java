@@ -152,7 +152,7 @@ public class FdbWheeler implements Comparable<FdbWheeler> {
         TextView tv = new TextView(activity);
         tv.setText(mName);
         tv.setTextColor(Color.WHITE);
-        //tv.setTextColor();
+        //tv.setShadowLayer(1, 0, 0, Color.BLACK);
         tv.setRotation(mDegree);
         tv.setShadowLayer((float) 0.06, 5, 5, Color.BLACK);
 
@@ -161,8 +161,34 @@ public class FdbWheeler implements Comparable<FdbWheeler> {
         mRealY = (mYcoord + mLY) * mScreenRatioH;
         */
 
-        mRealY = FdbHelper.fdbHelperCalcYCoord(mYcoord + mLY);
-        mRealX = FdbHelper.fdbHelperCalcXCoord(mRealY, (mXcoord + mLX), (mYcoord + mLY));
+        mRealY = FdbHelper.fdbHelperCalcYCoord(mYcoord);
+        //mRealX = FdbHelper.fdbHelperCalcXCoord(mRealY, (mXcoord + mLX), (mYcoord + mLY));
+        mRealX = FdbHelper.fdbHelperCalcXCoord(mXcoord);
+        Log.e("fcw, mRealX=", Float.toString(mRealX));
+        Log.e("fcw, mRealY=", Float.toString(mRealY));
+
+        tv.setX(mRealX);
+        tv.setY(mRealY);
+
+        mTV = tv;
+        mFlag = true;
+
+        return tv;
+    }
+
+    public TextView createTextView1(final Activity activity) {
+        TextView tv = new TextView(activity);
+        tv.setText(mName);
+        tv.setTextColor(Color.WHITE);
+        tv.setRotation(mDegree);
+        tv.setShadowLayer(1, 0, 0, Color.BLACK);
+        //tv.setShadowLayer((float) 0.06, 5, 5, Color.BLACK);
+
+        mRealY = FdbHelper.fdbHelperCalcYCoord(mYcoord);
+        mRealX = FdbHelper.fdbHelperCalcXCoord(mXcoord);
+        Log.e("fcw, mName", mName);
+        Log.e("fcw, mXcoord", ""+ mXcoord);
+        Log.e("fcw, mYcoord", ""+ mYcoord);
         Log.e("fcw, mRealX=", Float.toString(mRealX));
         Log.e("fcw, mRealY=", Float.toString(mRealY));
 
@@ -183,8 +209,9 @@ public class FdbWheeler implements Comparable<FdbWheeler> {
         //tv.setRotation(mDegree);
         tv.setShadowLayer((float) 0.06, 5, 5, Color.BLACK);
 
-        mRealY = FdbHelper.fdbHelperCalcYCoord(mYcoord + mLY);
-        mRealX = FdbHelper.fdbHelperCalcXCoord(mRealY, (mXcoord + mLX), (mYcoord + mLY));
+        mRealY = FdbHelper.fdbHelperCalcYCoord(mYcoord);
+        //mRealX = FdbHelper.fdbHelperCalcXCoord(mRealY, (mXcoord + mLX), (mYcoord + mLY));
+        mRealX = FdbHelper.fdbHelperCalcXCoord(mXcoord);
 
         tv.setX(mRealX);
         tv.setY(mRealY);

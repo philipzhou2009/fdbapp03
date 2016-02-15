@@ -108,7 +108,7 @@ public class PerfumeXmlParser {
             this.mXcoord = Float.parseFloat(cwx);
             this.mYcoord = Float.parseFloat(cwy);
             this.mRealY = FdbHelper.fdbHelperCalcYCoord((mYcoord + mLY));
-            this.mRealX = FdbHelper.fdbHelperCalcXCoord(this.mRealY, (mXcoord + mLX), (mYcoord + mLY));
+            this.mRealX = 0; //FdbHelper.fdbHelperCalcXCoord(this.mRealY, (mXcoord + mLX), (mYcoord + mLY));
         }
 
         public Entry(Entry parentEntry) {
@@ -128,7 +128,7 @@ public class PerfumeXmlParser {
             this.mYcoord = Float.parseFloat(parentEntry.cwy);
 
             this.mRealY = FdbHelper.fdbHelperCalcYCoord((mYcoord + mLY));
-            this.mRealX = FdbHelper.fdbHelperCalcXCoord(this.mRealY, (mXcoord + mLX), (mYcoord + mLY));
+            this.mRealX = 0; //FdbHelper.fdbHelperCalcXCoord(this.mRealY, (mXcoord + mLX), (mYcoord + mLY));
 
         }
 

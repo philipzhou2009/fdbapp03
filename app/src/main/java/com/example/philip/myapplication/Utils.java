@@ -8,6 +8,7 @@ import android.content.res.Resources;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.View;
@@ -78,5 +79,13 @@ public class Utils {
         );
 
         return px;
+    }
+
+    static public int convertPxToDp(Context mContext, int iPx)
+    {
+        DisplayMetrics displayMetrics = mContext.getResources().getDisplayMetrics();
+        int iDp = (int) (iPx / displayMetrics.density);
+
+        return iDp;
     }
 }

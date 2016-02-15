@@ -1,5 +1,6 @@
 package com.example.philip.myapplication;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Point;
 import android.os.Bundle;
@@ -47,6 +48,7 @@ public class ColorWheel extends AppCompatActivity {
         Utils.enableAppbarWithBack(this);
 
         // get screen size in pixel
+        /*
         Display display = getWindowManager().getDefaultDisplay();
         Point size = new Point();
         display.getSize(size);
@@ -62,6 +64,7 @@ public class ColorWheel extends AppCompatActivity {
 
         FdbAddition.mScreenHeight = height;
 
+
         TypedValue tvv = new TypedValue();
         if (getTheme().resolveAttribute(android.R.attr.actionBarSize, tvv, true))
         {
@@ -69,17 +72,6 @@ public class ColorWheel extends AppCompatActivity {
             Log.e("actionBarHeight", "" + actionBarHeight);
         }
 
-        ActionBar bar = getSupportActionBar();
-        Log.e("bar.getHeight()", "" + bar.getHeight());
-
-
-        /*
-        ImageView bgCw = (ImageView) findViewById(R.id.bg_colorwheel);
-        int bgCwWidth = bgCw.getWidth();
-        int bgCwHeight = bgCw.getHeight();
-
-        Log.e("bg_colorwheel width", "" + bgCwWidth);
-        Log.e("bg_colorwheel height", "" + bgCwHeight);
         */
 
         /*
@@ -114,10 +106,11 @@ public class ColorWheel extends AppCompatActivity {
             Log.e("fdb:ColorWheel:select", select);
         }
 
+        /*
         ArrayList<float[]> coordsList = new ArrayList<float[]>();
         for (FdbWheeler wheeler : mFdbWheelers) {
-            if (false) {
-                TextView tv = wheeler.createTextView(this);
+            if (true) {
+                TextView tv = wheeler.createTextView1(this);
                 colorWheelLayout.addView(tv);
             } else {
                 for (String select : mSelections) {
@@ -131,8 +124,10 @@ public class ColorWheel extends AppCompatActivity {
                 }
             }
         }
+        */
 
         // draw triangle
+        /*
         FdbWheelTriangle triangle = new FdbWheelTriangle(this, coordsList);
         colorWheelLayout.addView(triangle);
 
@@ -148,20 +143,78 @@ public class ColorWheel extends AppCompatActivity {
         for (FdbAddition noteObj : mAdditions) {
             // Log.e("fcw, noteObj.mName=", "|"+ noteObj.mName + "|");
         }
+        */
 
     }
 
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);
-        //Here you can get the size!
 
         ImageView bgCw = (ImageView) findViewById(R.id.bg_colorwheel);
         int bgCwWidth = bgCw.getWidth();
         int bgCwHeight = bgCw.getHeight();
+        int radius = bgCwHeight/2;
 
         Log.e("bg_colorwheel width", "" + bgCwWidth);
         Log.e("bg_colorwheel height", "" + bgCwHeight);
+        Log.e("bg_colorwheel radius", "" + radius);
+
+        int[] location = new int[2];
+        bgCw.getLocationOnScreen(location);
+        float bgCwX = location[0];
+        int bgCwY = location[1];
+        Log.e("bg_colorwheel X", "" + bgCwX);
+        Log.e("bg_colorwheel Y", "" + bgCwY);
+        //FdbHelper.setmBgMarginTop(bgCwY);
+
+        // central point
+        int bgCwCX = bgCwWidth/2;
+        int bgCwCY = bgCwY + bgCwHeight/2;
+        Log.e("bgCwCX", "" + bgCwCX);
+        Log.e("bgCwCY", "" + bgCwCY);
+
+        int iMarginLeft = (bgCwWidth - bgCwHeight) / 2;
+        int iMarginTop = bgCwY;
+
+
+        FdbHelper.setmMarginLeft(iMarginLeft);
+        FdbHelper.setmMarginTop(iMarginTop);
+
+        float mDiameterRatio = radius / 500.0f;
+        FdbHelper.mDiameterRatio = mDiameterRatio;
+        FdbHelper.mScreenHeight = bgCwHeight;
+        FdbHelper.mScreenWidth = bgCwWidth;
+
+        FdbAddition.mScreenHeight = bgCwHeight;
+
+        RelativeLayout colorWheelLayout = (RelativeLayout) findViewById(R.id.colorWheelLayout);
+        mCWLayout = colorWheelLayout;
+
+        Context mContext = this.getBaseContext();
+        TextView tvc = new TextView(mContext);
+        tvc.setText("...");
+        tvc.setX(bgCwCX);
+        tvc.setY(bgCwCY);
+        colorWheelLayout.addView(tvc);
+
+        ArrayList<float[]> coordsList = new ArrayList<float[]>();
+        for (FdbWheeler wheeler : mFdbWheelers) {
+            if (true) {
+                TextView tv = wheeler.createTextView1(this);
+                colorWheelLayout.addView(tv);
+            } else {
+                for (String select : mSelections) {
+                    if (wheeler.mName.equals(select)) {
+                        //TextView tv = wheeler.createTextView(this);
+                        TextView tv = wheeler.createHorizontalTextView(this);
+                        colorWheelLayout.addView(tv);
+                        float coordsXY[] = {wheeler.mRealX, wheeler.mRealY};
+                        coordsList.add(coordsXY);
+                    }
+                }
+            }
+        }
 
     }
 

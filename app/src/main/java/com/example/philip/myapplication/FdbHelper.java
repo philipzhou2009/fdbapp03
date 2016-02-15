@@ -26,6 +26,11 @@ public class FdbHelper {
     public static float mScreenWidth = 2560.0f;
     public static float mScreenHeight = 1600.0f;
 
+
+    public static float mBgMarginTop = 0;
+    public static int mMarginTop = 0;
+    public static int mMarginLeft = 0;
+
     public static int getId(String resourceName, Class<?> c) {
         try {
             Field idField = c.getDeclaredField(resourceName);
@@ -145,8 +150,7 @@ public class FdbHelper {
                 ycoord = Float.parseFloat(readByNoteName(parser, name));
             } else if (name.equals("degree")) {
                 degree = Float.parseFloat(readByNoteName(parser, name));
-            }
-            else {
+            } else {
                 skip(parser);
             }
         }
@@ -236,8 +240,7 @@ public class FdbHelper {
                 ycoord = Float.parseFloat(readByNoteName(parser, name));
             } else if (name.equals("degree")) {
                 degree = Float.parseFloat(readByNoteName(parser, name));
-            }
-            else {
+            } else {
                 skip(parser);
             }
         }
@@ -301,7 +304,7 @@ public class FdbHelper {
         String title = null;
         float xcoord = 0;
         float ycoord = 0;
-        String imagename=null;
+        String imagename = null;
 
         while (parser.next() != XmlPullParser.END_TAG) {
             if (parser.getEventType() != XmlPullParser.START_TAG) {
@@ -316,37 +319,61 @@ public class FdbHelper {
                 ycoord = Float.parseFloat(readByNoteName(parser, name));
             } else if (name.equals("img")) {
                 imagename = readByNoteName(parser, name);
-            }
-            else {
+            } else {
                 skip(parser);
             }
         }
         return new FdbAddition(title, xcoord, ycoord, imagename);
     }
 
-    public static float fdbHelperCalcYCoord(float ycoord) {
+    public static float fdbHelperCalcYCoord0(float ycoord) {
         float rycoord = 0f;
-
-        rycoord = (ycoord - 800) * mDiameterRatio + mScreenHeight/2.0f;
-
+        rycoord = (ycoord - 800) * mDiameterRatio + mScreenHeight / 2.0f;
         return rycoord;
-
     }
 
-    public static float fdbHelperCalcXCoord(float ycoord, float xorg, float yorg) {
+    public static float fdbHelperCalcXCoord0(float ycoord, float xorg, float yorg) {
 
-        double fTmp1 = mDiameterRatio * mDiameterRatio * ((xorg - 1280.0f) * (xorg - 1280.0f) + (yorg - 800.0f) * (yorg - 800.0f)) - (ycoord - mScreenHeight/2.0f)*(ycoord - mScreenHeight/2.0f) ;
+        double fTmp1 = mDiameterRatio * mDiameterRatio * ((xorg - 1280.0f) * (xorg - 1280.0f) + (yorg - 800.0f) * (yorg - 800.0f)) - (ycoord - mScreenHeight / 2.0f) * (ycoord - mScreenHeight / 2.0f);
         double fTmp2 = Math.sqrt(fTmp1);
         float dTmp3 = 0f;
-        if(xorg > 1280.0f) {
+        if (xorg > 1280.0f) {
             dTmp3 = (float) (mScreenWidth / 2.0 + fTmp2);
-        }
-        else {
+        } else {
             dTmp3 = (float) (mScreenWidth / 2.0 - fTmp2);
         }
         //Log.e("fcw, xxx=", Float.toString((ycoord - mScreenHeight / 2.0f) * (ycoord - mScreenHeight / 2.0f)));
 
         return dTmp3;
+    }
+
+    public static float fdbHelperCalcYCoord(float ycoord) {
+        return ycoord * mDiameterRatio + getmMarginTop();
+    }
+
+
+    public static float fdbHelperCalcXCoord(float xcoord) {
+        return xcoord * mDiameterRatio + getmMarginLeft();
+    }
+
+    public static void setmBgMarginTop(float mBgMarginTop) {
+        FdbHelper.mBgMarginTop = mBgMarginTop;
+    }
+
+    public static int getmMarginTop() {
+        return mMarginTop;
+    }
+
+    public static void setmMarginTop(int mMarginTop) {
+        FdbHelper.mMarginTop = mMarginTop;
+    }
+
+    public static int getmMarginLeft() {
+        return mMarginLeft;
+    }
+
+    public static void setmMarginLeft(int mMarginLeft) {
+        FdbHelper.mMarginLeft = mMarginLeft;
     }
 }
 

@@ -82,7 +82,8 @@ public class FdbAddition extends FdbWheeler implements Parcelable {
         //mRealY = mYcoord + mLY;
 
         mRealY = FdbHelper.fdbHelperCalcYCoord((mYcoord + mLY));
-        mRealX = FdbHelper.fdbHelperCalcXCoord(this.mRealY, (mXcoord + mLX), (mYcoord + mLY));
+        //mRealX = FdbHelper.fdbHelperCalcXCoord(this.mRealY, (mXcoord + mLX), (mYcoord + mLY));
+        mRealX = FdbHelper.fdbHelperCalcXCoord(mXcoord);
 
         tv.setX(mRealX);
         tv.setY(mRealY);
@@ -175,6 +176,7 @@ public class FdbAddition extends FdbWheeler implements Parcelable {
         return tv;
     }
 
+    /*
     public void adjustTextView() {
         TextView textView = mTV;
 
@@ -188,4 +190,5 @@ public class FdbAddition extends FdbWheeler implements Parcelable {
         // margin and padding
         textView.setPadding(0, 0, 5, 0);
     }
+    */
 }
