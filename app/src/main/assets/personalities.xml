@@ -1,187 +1,187 @@
-<!-- these coords based on center(500, 500) -->
+<!-- these coords based on center(590, 590) -->
 <personalities>
     <personality>
         <name>Passionate</name>
-        <x>500</x>
-        <y>150</y>
+        <x>590</x>
+        <y>240</y>
         <degree>0</degree>
     </personality>
     <personality>
         <name>Sexy</name>
-        <x>458</x>
-        <y>263</y>
+        <x>554</x>
+        <y>357</y>
         <degree>0</degree>
     </personality>
     <personality>
         <name>Energetic</name>
-        <x>314</x>
-        <y>235</y>
+        <x>406</x>
+        <y>332</y>
         <degree>0</degree>
     </personality>
     <personality>
         <name>Lively</name>
-        <x>353</x>
-        <y>162</y>
+        <x>448</x>
+        <y>260</y>
         <degree>0</degree>
     </personality>
     <personality>
         <name>Sensual</name>
-        <x>623</x>
-        <y>209</y>
+        <x>717</x>
+        <y>304</y>
         <degree>0</degree>
     </personality>
 
     <personality>
         <name>Optimistic</name>
-        <x>194</x>
-        <y>341</y>
+        <x>290</x>
+        <y>435</y>
         <degree>0</degree>
     </personality>
     <personality>
         <name>Joyful</name>
-        <x>349</x>
-        <y>356</y>
+        <x>440</x>
+        <y>450</y>
         <degree>0</degree>
     </personality>
     <personality>
         <name>Happy</name>
-        <x>298</x>
-        <y>439</y>
+        <x>396</x>
+        <y>534</y>
         <degree>0</degree>
     </personality>
     <personality>
         <name>Natural</name>
-        <x>160</x>
-        <y>490</y>
+        <x>255</x>
+        <y>586</y>
         <degree>0</degree>
     </personality>
     <personality>
         <name>Fresh</name>
-        <x>174</x>
-        <y>583</y>
+        <x>270</x>
+        <y>678</y>
         <degree>0</degree>
     </personality>
     <personality>
         <name>Harmonious</name>
-        <x>336</x>
-        <y>572</y>
+        <x>430</x>
+        <y>668</y>
         <degree>0</degree>
     </personality>
     <personality>
         <name>Inspired</name>
-        <x>368</x>
-        <y>693</y>
+        <x>480</x>
+        <y>790</y>
         <degree>0</degree>
     </personality>
     <personality>
         <name>Refreshed</name>
-        <x>330</x>
-        <y>746</y>
+        <x>430</x>
+        <y>838</y>
         <degree>0</degree>
     </personality>
     <personality>
         <name>Relaxed</name>
-        <x>393</x>
-        <y>807</y>
+        <x>490</x>
+        <y>902</y>
         <degree>0</degree>
     </personality>
 
     <personality>
         <name>Charming</name>
-        <x>676</x>
-        <y>279</y>
+        <x>770</x>
+        <y>378</y>
         <degree>0</degree>
     </personality>
     <personality>
         <name>Romantic</name>
-        <x>555</x>
-        <y>322</y>
+        <x>646</x>
+        <y>417</y>
         <degree>0</degree>
     </personality>
     <personality>
         <name>Soothed</name>
-        <x>745</x>
-        <y>333</y>
+        <x>842</x>
+        <y>428</y>
         <degree>0</degree>
     </personality>
     <personality>
         <name>Artistic</name>
-        <x>628</x>
-        <y>396</y>
+        <x>722</x>
+        <y>494</y>
         <degree>0</degree>
     </personality>
     <personality>
         <name>Creative</name>
-        <x>662</x>
-        <y>440</y>
+        <x>758</x>
+        <y>536</y>
         <degree>0</degree>
     </personality>
     <personality>
         <name>Opulent</name>
-        <x>836</x>
-        <y>436</y>
+        <x>930</x>
+        <y>530</y>
         <degree>0</degree>
     </personality>
 
     <personality>
         <name>Sophisticated</name>
-        <x>800</x>
-        <y>534</y>
+        <x>897</x>
+        <y>627</y>
         <degree>0</degree>
     </personality>
     <personality>
         <name>Trusted</name>
-        <x>655</x>
-        <y>563</y>
+        <x>750</x>
+        <y>658</y>
         <degree>0</degree>
     </personality>
     <personality>
         <name>Confident</name>
-        <x>780</x>
-        <y>606</y>
+        <x>880</x>
+        <y>700</y>
         <degree>0</degree>
     </personality>
     <personality>
         <name>Stable</name>
-        <x>676</x>
-        <y>706</y>
+        <x>772</x>
+        <y>802</y>
         <degree>0</degree>
     </personality>
     <personality>
         <name>Calm</name>
-        <x>543</x>
-        <y>713</y>
+        <x>636</x>
+        <y>808</y>
         <degree>0</degree>
     </personality>
     <personality>
         <name>Tranquil</name>
-        <x>640</x>
-        <y>822</y>
+        <x>735</x>
+        <y>918</y>
         <degree>0</degree>
     </personality>
 
     <personality>
         <name>Dangerous</name>
-        <x>443</x>
-        <y>449</y>
+        <x>538</x>
+        <y>548</y>
         <degree>-45</degree>
     </personality>
     <personality>
         <name>Intriguing</name>
-        <x>542</x>
-        <y>440</y>
+        <x>638</x>
+        <y>538</y>
         <degree>45</degree>
     </personality>
     <personality>
         <name>Mysterious</name>
-        <x>442</x>
-        <y>535</y>
+        <x>540</x>
+        <y>632</y>
         <degree>225</degree>
     </personality>
     <personality>
         <name>Assertive</name>
-        <x>548</x>
-        <y>540</y>
+        <x>642</x>
+        <y>636</y>
         <degree>135</degree>
     </personality>
 

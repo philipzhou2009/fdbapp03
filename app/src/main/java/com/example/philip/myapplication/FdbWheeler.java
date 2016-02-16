@@ -180,20 +180,29 @@ public class FdbWheeler implements Comparable<FdbWheeler> {
         TextView tv = new TextView(activity);
         tv.setText(mName);
         tv.setTextColor(Color.WHITE);
-        tv.setRotation(mDegree);
-        tv.setShadowLayer(1, 0, 0, Color.BLACK);
+        //tv.setRotation(mDegree);
+        tv.setShadowLayer(2, 0, 0, Color.BLACK);
         //tv.setShadowLayer((float) 0.06, 5, 5, Color.BLACK);
+
+        tv.measure(0, 0);       //must call measure!
+        int mh = tv.getMeasuredHeight(); //get height
+        int mw = tv.getMeasuredWidth();
 
         mRealY = FdbHelper.fdbHelperCalcYCoord(mYcoord);
         mRealX = FdbHelper.fdbHelperCalcXCoord(mXcoord);
+
+        int mFinalX = (int)(mRealX - mw/2);
+        int mFinalY = (int)(mRealY - mh/2);
+        tv.setX(mFinalX);
+        tv.setY(mFinalY);
+
         Log.e("fcw, mName", mName);
-        Log.e("fcw, mXcoord", ""+ mXcoord);
-        Log.e("fcw, mYcoord", ""+ mYcoord);
+        Log.e("fcw, mXcoord", "" + mXcoord);
+        Log.e("fcw, mYcoord", "" + mYcoord);
         Log.e("fcw, mRealX=", Float.toString(mRealX));
         Log.e("fcw, mRealY=", Float.toString(mRealY));
-
-        tv.setX(mRealX);
-        tv.setY(mRealY);
+        Log.e("fcw, mw", ""+ mw);
+        Log.e("fcw, mh", "" + mh);
 
         mTV = tv;
         mFlag = true;

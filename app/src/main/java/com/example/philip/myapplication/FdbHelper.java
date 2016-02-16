@@ -26,10 +26,12 @@ public class FdbHelper {
     public static float mScreenWidth = 2560.0f;
     public static float mScreenHeight = 1600.0f;
 
-
     public static float mBgMarginTop = 0;
     public static int mMarginTop = 0;
     public static int mMarginLeft = 0;
+
+    public static int mCenterX;
+    public static int mCenterY;
 
     public static int getId(String resourceName, Class<?> c) {
         try {
@@ -347,13 +349,15 @@ public class FdbHelper {
         return dTmp3;
     }
 
-    public static float fdbHelperCalcYCoord(float ycoord) {
-        return ycoord * mDiameterRatio + getmMarginTop();
+    public static int fdbHelperCalcYCoord(float ycoord) {
+        int result = (int)((ycoord - 590) * mDiameterRatio + getmCenterY());
+        return result;
     }
 
 
-    public static float fdbHelperCalcXCoord(float xcoord) {
-        return xcoord * mDiameterRatio + getmMarginLeft();
+    public static int fdbHelperCalcXCoord(float xcoord) {
+        int result = (int)((xcoord - 590) * mDiameterRatio + getmCenterX());
+        return result;
     }
 
     public static void setmBgMarginTop(float mBgMarginTop) {
@@ -374,6 +378,22 @@ public class FdbHelper {
 
     public static void setmMarginLeft(int mMarginLeft) {
         FdbHelper.mMarginLeft = mMarginLeft;
+    }
+
+    public static int getmCenterX() {
+        return mCenterX;
+    }
+
+    public static void setmCenterX(int mCenterX) {
+        FdbHelper.mCenterX = mCenterX;
+    }
+
+    public static int getmCenterY() {
+        return mCenterY;
+    }
+
+    public static void setmCenterY(int mCenterY) {
+        FdbHelper.mCenterY = mCenterY;
     }
 }
 

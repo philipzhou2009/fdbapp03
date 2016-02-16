@@ -145,6 +145,8 @@ public class ColorWheel extends AppCompatActivity {
         }
         */
 
+
+
     }
 
     @Override
@@ -154,7 +156,7 @@ public class ColorWheel extends AppCompatActivity {
         ImageView bgCw = (ImageView) findViewById(R.id.bg_colorwheel);
         int bgCwWidth = bgCw.getWidth();
         int bgCwHeight = bgCw.getHeight();
-        int radius = bgCwHeight/2;
+        int radius = bgCwHeight / 2;
 
         Log.e("bg_colorwheel width", "" + bgCwWidth);
         Log.e("bg_colorwheel height", "" + bgCwHeight);
@@ -169,8 +171,8 @@ public class ColorWheel extends AppCompatActivity {
         //FdbHelper.setmBgMarginTop(bgCwY);
 
         // central point
-        int bgCwCX = bgCwWidth/2;
-        int bgCwCY = bgCwY + bgCwHeight/2;
+        int bgCwCX = bgCwWidth / 2;
+        int bgCwCY = bgCwY + bgCwHeight / 2;
         Log.e("bgCwCX", "" + bgCwCX);
         Log.e("bgCwCY", "" + bgCwCY);
 
@@ -181,7 +183,10 @@ public class ColorWheel extends AppCompatActivity {
         FdbHelper.setmMarginLeft(iMarginLeft);
         FdbHelper.setmMarginTop(iMarginTop);
 
-        float mDiameterRatio = radius / 500.0f;
+        FdbHelper.setmCenterX(bgCwCX);
+        FdbHelper.setmCenterY(bgCwCY);
+
+        float mDiameterRatio = radius / 590.0f;
         FdbHelper.mDiameterRatio = mDiameterRatio;
         FdbHelper.mScreenHeight = bgCwHeight;
         FdbHelper.mScreenWidth = bgCwWidth;
@@ -191,19 +196,54 @@ public class ColorWheel extends AppCompatActivity {
         RelativeLayout colorWheelLayout = (RelativeLayout) findViewById(R.id.colorWheelLayout);
         mCWLayout = colorWheelLayout;
 
+        /*
         Context mContext = this.getBaseContext();
         TextView tvc = new TextView(mContext);
-        tvc.setText("...");
+        tvc.setText("X");
         tvc.setX(bgCwCX);
         tvc.setY(bgCwCY);
         colorWheelLayout.addView(tvc);
+        */
 
-        ArrayList<float[]> coordsList = new ArrayList<float[]>();
-        for (FdbWheeler wheeler : mFdbWheelers) {
-            if (true) {
+        if (false) {
+            for (FdbWheeler wheeler : mFdbWheelers) {
                 TextView tv = wheeler.createTextView1(this);
                 colorWheelLayout.addView(tv);
-            } else {
+            }
+        }
+
+        List<FdbWheeler> wheelers = new ArrayList<>();
+        for (FdbWheeler wheeler : mFdbWheelers) {
+            for (String select : mSelections) {
+                if (wheeler.mName.equals(select)) {
+                    wheelers.add(wheeler);
+                    wheeler.createTextView1(this);
+                }
+            }
+        }
+
+        // draw triangle
+        ArrayList<float[]> coordsList = new ArrayList<>();
+        for (FdbWheeler wheeler : wheelers) {
+            float coordsXY[] = {wheeler.mRealX, wheeler.mRealY};
+            coordsList.add(coordsXY);
+        }
+        FdbWheelTriangle triangle = new FdbWheelTriangle(this, coordsList);
+        colorWheelLayout.addView(triangle);
+
+        // draw text
+        for(FdbWheeler wheeler: wheelers)
+        {
+            colorWheelLayout.addView(wheeler.mTV);
+        }
+
+        // flower
+        this.drawFlower();
+
+
+        /*
+        for (FdbWheeler wheeler : mFdbWheelers) {
+            {
                 for (String select : mSelections) {
                     if (wheeler.mName.equals(select)) {
                         //TextView tv = wheeler.createTextView(this);
@@ -215,6 +255,13 @@ public class ColorWheel extends AppCompatActivity {
                 }
             }
         }
+        */
+
+        // draw perfume titles
+        for (PerfumeXmlParser.Entry perfume : mPerfumes) {
+            View view = perfume.drawPerfume(this, mAdditions, false);
+            colorWheelLayout.addView(view);
+        }
 
     }
 
@@ -222,7 +269,7 @@ public class ColorWheel extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         //getMenuInflater().inflate(R.menu.color_wheel, menu);
-        return true;
+        return false;
     }
 
     @Override
@@ -286,12 +333,16 @@ public class ColorWheel extends AppCompatActivity {
 
         final PerfumeXmlParser.Entry perfume = mPerfumes.get(iFlag);
         PerfumeXmlParser.Entry flowerEntry = new PerfumeXmlParser.Entry(perfume);
-        flowerEntry.drawPerfume(this, mAdditions);
+        flowerEntry.drawPerfume(this, mAdditions, true);
+
+        /*
         LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(flowerWidth, flowerWidth);
         ImageView flower = (ImageView) flowerEntry.mFlower;
-        flower.setImageResource(R.drawable.icon);
+        flower.setImageResource(R.drawable.fdb_flower);
         flower.setLayoutParams(layoutParams);
+        */
 
+        View flower = flowerEntry.mView;
         flower.setX(fCentralX);
         flower.setY(fCentralY);
 

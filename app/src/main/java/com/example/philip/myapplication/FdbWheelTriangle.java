@@ -27,8 +27,8 @@ public class FdbWheelTriangle extends View {
 
     public FdbWheelTriangle(Context context, ArrayList<float[]> coordsList) {
         super(context);
-        paint.setColor(Color.WHITE);
-        paint.setStrokeWidth(4);
+        paint.setColor(context.getResources().getColor(R.color.gold));
+        paint.setStrokeWidth(2);
 
         mCoordsList = coordsList;
         mContext = context;
@@ -43,11 +43,6 @@ public class FdbWheelTriangle extends View {
         float[] coords1 = mCoordsList.get(1);
         float[] coords2 = mCoordsList.get(2);
 
-        /*
-        canvas.drawLine(coords0[0], coords0[1], coords1[0], coords1[1], paint);
-        canvas.drawLine(coords1[0], coords1[1], coords2[0], coords2[1], paint);
-        canvas.drawLine(coords2[0], coords2[1], coords0[0], coords0[1], paint);
-        */
         Path path = new Path();
         path.moveTo(coords0[0], coords0[1]);
         path.lineTo(coords1[0], coords1[1]);
@@ -58,5 +53,9 @@ public class FdbWheelTriangle extends View {
         paint.setStyle(Paint.Style.STROKE);
         paint.setAntiAlias(true);
         canvas.drawPath(path, paint);
+
+        //canvas.drawLine(0, 0, coords0[0], coords0[1], paint);
+        //Log.e("coords0[0]", "" + coords0[0]);
+        //Log.e("coords0[1]", "" + coords0[1]);
     }
 }

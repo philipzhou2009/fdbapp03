@@ -44,7 +44,7 @@ public class PerfumeXmlParser {
     }
 
     private List<Entry> readFeed(XmlPullParser parser) throws XmlPullParserException, IOException {
-        List<Entry> entries = new ArrayList<Entry>();
+        List<Entry> entries = new ArrayList<>();
 
         parser.require(XmlPullParser.START_TAG, ns, "fdb");
         while (parser.next() != XmlPullParser.END_TAG) {
@@ -89,7 +89,8 @@ public class PerfumeXmlParser {
         float mRealX = 0;
         float mRealY = 0;
 
-        View mFlower=null;
+        View mFlower = null;
+        View mView;
 
         private Entry(String title, String perfumer, String topnotes, String middlenotes,
                       String basenodes, String thumbnail, String themecolor, String fontcolor, String portrait, String profile, String cwx, String cwy) {
@@ -127,11 +128,12 @@ public class PerfumeXmlParser {
             this.mXcoord = Float.parseFloat(parentEntry.cwx);
             this.mYcoord = Float.parseFloat(parentEntry.cwy);
 
-            this.mRealY = FdbHelper.fdbHelperCalcYCoord((mYcoord + mLY));
-            this.mRealX = 0; //FdbHelper.fdbHelperCalcXCoord(this.mRealY, (mXcoord + mLX), (mYcoord + mLY));
+            this.mRealY = FdbHelper.fdbHelperCalcYCoord(mYcoord);
+            this.mRealX = FdbHelper.fdbHelperCalcXCoord(mXcoord);
 
         }
 
+        /*
         public View drawFlower(final Activity activity) {
             ImageView flower = new ImageView(activity);
             // make flower invisible
@@ -170,18 +172,17 @@ public class PerfumeXmlParser {
 
             return flower;
         }
+        */
 
-        public View drawPerfume(final Activity activity, final List<FdbAddition> notes) {
+        public View drawPerfume0(final Activity activity, final List<FdbAddition> notes) {
 
             // convert List to ArrayList
-            final ArrayList<FdbAddition> notesArrayList = new ArrayList<FdbAddition>();
-            for (FdbAddition note: notes)
-            {
+            final ArrayList<FdbAddition> notesArrayList = new ArrayList<>();
+            for (FdbAddition note : notes) {
                 notesArrayList.add(note);
             }
 
-            for (FdbAddition noteObj: notesArrayList)
-            {
+            for (FdbAddition noteObj : notesArrayList) {
                 //Log.e("drawPerfume, noteObj.mName=", "|" + noteObj.mName + "|");
             }
 
@@ -225,8 +226,72 @@ public class PerfumeXmlParser {
 
             return flower;
         }
-    }
 
+        public View drawPerfume(final Activity activity, final List<FdbAddition> notes, boolean mFlowerFlag) {
+            if (mFlowerFlag) {
+                int flowerWidth = 110;
+                ImageView flower = new ImageView(activity);
+                flower.setImageResource(R.drawable.fdb_flower);
+                LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(flowerWidth, flowerWidth);
+                flower.setLayoutParams(layoutParams);
+
+                //flower.setX(mRealX);
+                //flower.setY(mRealY);
+
+                mView = flower;
+            } else {
+                TextView tv = new TextView(activity);
+
+                tv.setText(this.title);
+                tv.setX(this.mRealX);
+                tv.setY(this.mRealY);
+
+                mView = tv;
+            }
+
+
+            // convert List to ArrayList
+            final ArrayList<FdbAddition> notesArrayList = new ArrayList<>();
+            for (FdbAddition note : notes) {
+                notesArrayList.add(note);
+            }
+
+            for (FdbAddition noteObj : notesArrayList) {
+                //Log.e("drawPerfume, noteObj.mName=", "|" + noteObj.mName + "|");
+            }
+
+            final Entry perfume = this;
+            mView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    //Log.e("fdb:PerfumeXmlParser", "flower.setOnClickListener");
+                    Intent myIntent;
+                    myIntent = new Intent(v.getContext(), ScreenSlideActivity.class);
+                    ArrayList<String> strList = new ArrayList();
+
+                    strList.add(0, perfume.title);
+                    strList.add(1, perfume.thumbnail);
+                    strList.add(2, perfume.themecolor);
+                    strList.add(3, perfume.topnotes);
+                    strList.add(4, perfume.middlenotes);
+                    strList.add(5, perfume.basenodes);
+                    strList.add(6, perfume.perfumer);
+                    strList.add(7, perfume.fontcolor);
+                    strList.add(8, perfume.portrait);
+                    strList.add(9, perfume.profile);
+
+                    myIntent.putExtra("perfumedata", strList);
+                    myIntent.putExtra("notesdata", notesArrayList);
+                    activity.startActivityForResult(myIntent, 0);
+                }
+            });
+
+            return mView;
+        }
+
+
+
+    }
 
     // Parses the contents of an entry. If it encounters a title, summary, or link tag, hands them
     // off
@@ -259,24 +324,23 @@ public class PerfumeXmlParser {
                 topnotes = readByNoteName(parser, name);
             } else if (name.equals("middlenotes")) {
                 middlenotes = readByNoteName(parser, name);
-            }else if (name.equals("basenotes")) {
+            } else if (name.equals("basenotes")) {
                 basenotes = readByNoteName(parser, name);
-            }else if (name.equals("thumbnail")) {
+            } else if (name.equals("thumbnail")) {
                 thumbnail = readByNoteName(parser, name);
-            }else if (name.equals("themecolor")) {
+            } else if (name.equals("themecolor")) {
                 themecolor = readByNoteName(parser, name);
-            }else if (name.equals("fontcolor")) {
+            } else if (name.equals("fontcolor")) {
                 fontcolor = readByNoteName(parser, name);
-            }else if (name.equals("portrait")) {
+            } else if (name.equals("portrait")) {
                 portrait = readByNoteName(parser, name);
-            }else if (name.equals("profile")) {
+            } else if (name.equals("profile")) {
                 profile = readByNoteName(parser, name);
-            }else if (name.equals("cwx")) {
+            } else if (name.equals("cwx")) {
                 cwx = readByNoteName(parser, name);
-            }else if (name.equals("cwy")) {
+            } else if (name.equals("cwy")) {
                 cwy = readByNoteName(parser, name);
-            }
-            else {
+            } else {
                 skip(parser);
             }
         }
