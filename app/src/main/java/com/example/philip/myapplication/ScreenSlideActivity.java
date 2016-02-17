@@ -17,15 +17,18 @@
 package com.example.philip.myapplication;
 
 import android.app.ActionBar;
-import android.app.Fragment;
-import android.app.FragmentManager;
 import android.content.Intent;
 import android.os.Bundle;
-//import android.support.v13.app.FragmentStatePagerAdapter;
+
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.NavUtils;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -34,11 +37,13 @@ import android.widget.FrameLayout;
 
 import java.util.ArrayList;
 
+//import android.support.v13.app.FragmentStatePagerAdapter;
+
 /**
  * Demonstrates a "screen-slide" animation using a {@link ViewPager}. Because {@link ViewPager}
  * automatically plays such an animation when calling {@link ViewPager#setCurrentItem(int)}, there
  * isn't any animation-specific code in this sample.
- *
+ * <p/>
  * <p>This sample shows a "next" button that advances the user to the next step in a wizard,
  * animating the current screen out (to the left) and the next screen in (from the right). The
  * reverse animation is played when the user presses the "previous" button.</p>
@@ -68,11 +73,23 @@ public class ScreenSlideActivity extends FragmentActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        Utils.setWindowFullScreen(this);
+
         setContentView(R.layout.activity_screen_slide);
+
+
+        final ActionBar bar = getActionBar();
+
+        // Get a support ActionBar corresponding to this toolbar
+        //android.support.v7.app.ActionBar ab = this.getSupportActionBar();
+
+        // Enable the Up button
+        //bar.setDisplayHomeAsUpEnabled(true);
 
         // Instantiate a ViewPager and a PagerAdapter.
         mPager = (ViewPager) findViewById(R.id.pager);
-        //mPagerAdapter = new ScreenSlidePagerAdapter(getFragmentManager());
+        mPagerAdapter = new ScreenSlidePagerAdapter(getSupportFragmentManager());
         mPager.setAdapter(mPagerAdapter);
         mPager.setOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
             @Override
@@ -99,16 +116,15 @@ public class ScreenSlideActivity extends FragmentActivity {
         //System.out.println("Contents of perfume data: " + perfumedata);
 
         mNotes = intent.getParcelableArrayListExtra("notesdata");
-        for (FdbAddition noteObj: mNotes)
-        {
-            Log.e("ScreenSlideActivity, noteObj.mName=", "|" + noteObj.mName + "|");
+        for (FdbAddition noteObj : mNotes) {
+            Log.e("ScreenSlideActivity note=", noteObj.mName + "|");
         }
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
-        /*
+
         getMenuInflater().inflate(R.menu.activity_screen_slide, menu);
 
         menu.findItem(R.id.action_previous).setEnabled(mPager.getCurrentItem() > 0);
@@ -120,7 +136,7 @@ public class ScreenSlideActivity extends FragmentActivity {
                         ? R.string.action_finish
                         : R.string.action_next);
         item.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM | MenuItem.SHOW_AS_ACTION_WITH_TEXT);
-        */
+
         return true;
     }
 
@@ -155,7 +171,6 @@ public class ScreenSlideActivity extends FragmentActivity {
      * A simple pager adapter that represents 5 {@link ScreenSlidePageFragment} objects, in
      * sequence.
      */
-    /*
     private class ScreenSlidePagerAdapter extends FragmentStatePagerAdapter {
         public ScreenSlidePagerAdapter(FragmentManager fm) {
             super(fm);
@@ -174,6 +189,6 @@ public class ScreenSlideActivity extends FragmentActivity {
             return NUM_PAGES;
         }
     }
-    */
+
 
 }

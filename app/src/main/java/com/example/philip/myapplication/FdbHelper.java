@@ -26,7 +26,6 @@ public class FdbHelper {
     public static float mScreenWidth = 2560.0f;
     public static float mScreenHeight = 1600.0f;
 
-    public static float mBgMarginTop = 0;
     public static int mMarginTop = 0;
     public static int mMarginLeft = 0;
 
@@ -350,6 +349,7 @@ public class FdbHelper {
     }
 
     public static int fdbHelperCalcYCoord(float ycoord) {
+        Log.e("getmCenterY()", ""+getmCenterY());
         int result = (int)((ycoord - 590) * mDiameterRatio + getmCenterY());
         return result;
     }
@@ -360,21 +360,11 @@ public class FdbHelper {
         return result;
     }
 
-    public static void setmBgMarginTop(float mBgMarginTop) {
-        FdbHelper.mBgMarginTop = mBgMarginTop;
-    }
-
-    public static int getmMarginTop() {
-        return mMarginTop;
-    }
 
     public static void setmMarginTop(int mMarginTop) {
         FdbHelper.mMarginTop = mMarginTop;
     }
 
-    public static int getmMarginLeft() {
-        return mMarginLeft;
-    }
 
     public static void setmMarginLeft(int mMarginLeft) {
         FdbHelper.mMarginLeft = mMarginLeft;

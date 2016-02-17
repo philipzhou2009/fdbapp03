@@ -108,8 +108,8 @@ public class PerfumeXmlParser {
             this.cwy = cwy;
             this.mXcoord = Float.parseFloat(cwx);
             this.mYcoord = Float.parseFloat(cwy);
-            this.mRealY = FdbHelper.fdbHelperCalcYCoord((mYcoord + mLY));
-            this.mRealX = 0; //FdbHelper.fdbHelperCalcXCoord(this.mRealY, (mXcoord + mLX), (mYcoord + mLY));
+            //this.mRealY = FdbHelper.fdbHelperCalcYCoord(mYcoord);
+            //this.mRealX = FdbHelper.fdbHelperCalcXCoord(mXcoord);
         }
 
         public Entry(Entry parentEntry) {
@@ -229,26 +229,44 @@ public class PerfumeXmlParser {
 
         public View drawPerfume(final Activity activity, final List<FdbAddition> notes, boolean mFlowerFlag) {
             if (mFlowerFlag) {
-                int flowerWidth = 110;
+                int flowerWidth = 30;
                 ImageView flower = new ImageView(activity);
                 flower.setImageResource(R.drawable.fdb_flower);
                 LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(flowerWidth, flowerWidth);
                 flower.setLayoutParams(layoutParams);
-
                 //flower.setX(mRealX);
                 //flower.setY(mRealY);
-
                 mView = flower;
             } else {
+                this.mRealY = FdbHelper.fdbHelperCalcYCoord(mYcoord);
+                this.mRealX = FdbHelper.fdbHelperCalcXCoord(mXcoord);
+
                 TextView tv = new TextView(activity);
 
                 tv.setText(this.title);
-                tv.setX(this.mRealX);
-                tv.setY(this.mRealY);
+                tv.setTextColor(Color.WHITE);
+
+                tv.measure(0, 0);       //must call measure!
+                int mh = tv.getMeasuredHeight(); //get height
+                int mw = tv.getMeasuredWidth();
+
+                int finalX = (int) (mRealX - mw / 2);
+                int finalY = (int) (mRealY);
+                tv.setX(finalX);
+                tv.setY(finalY);
 
                 mView = tv;
-            }
 
+                Log.e("perfume title", title);
+                Log.e("perfume mXcoord", "" + mXcoord);
+                Log.e("perfume mYcoord", "" + mYcoord);
+
+                Log.e("perfume mRealX", "" + mRealX);
+                Log.e("perfume mRealY", "" + mRealY);
+
+                Log.e("perfume finalX", "" + finalX);
+                Log.e("perfume finalY", "" + finalY);
+            }
 
             // convert List to ArrayList
             final ArrayList<FdbAddition> notesArrayList = new ArrayList<>();
@@ -288,7 +306,6 @@ public class PerfumeXmlParser {
 
             return mView;
         }
-
 
 
     }

@@ -27,5 +27,12 @@
     <string name="features">Features</string>
     <string name="go_to_colorwheel">Color Wheel</string>
     <string name="title_color_wheel">Color Wheel</string>
+    <string name="action_previous">Previous</string>
+    <string name="action_finish">Finish</string>
+    <string name="action_next">Next</string>
+    <string name="fragrancedubois">Fragrance Du Bois</string>
+    <string name="story">Story</string>
+    <string name="app_about">App</string>
+    <string name="title_activity_gallery">GalleryActivity</string>
 
 </resources>

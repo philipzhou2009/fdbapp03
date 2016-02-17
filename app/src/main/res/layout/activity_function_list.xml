@@ -36,7 +36,12 @@
         <Button
             android:id="@+id/btnAbout"
             style="@style/FDBButtonStyle"
-            android:text="@string/button_about" />
+            android:text="@string/story" />
+
+        <Button
+            android:id="@+id/btnAppAbout"
+            style="@style/FDBButtonStyle"
+            android:text="@string/app_about" />
 
     </GridLayout>
 

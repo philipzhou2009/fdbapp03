@@ -181,7 +181,7 @@ public class FdbWheeler implements Comparable<FdbWheeler> {
         tv.setText(mName);
         tv.setTextColor(Color.WHITE);
         //tv.setRotation(mDegree);
-        tv.setShadowLayer(2, 0, 0, Color.BLACK);
+        //tv.setShadowLayer(2, 0, 0, Color.BLACK);
         //tv.setShadowLayer((float) 0.06, 5, 5, Color.BLACK);
 
         tv.measure(0, 0);       //must call measure!

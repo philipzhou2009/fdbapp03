@@ -2,6 +2,7 @@ package com.example.philip.myapplication;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.NavUtils;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -40,6 +41,7 @@ public class PersonalityActivity extends AppCompatActivity {
 
         Utils.enableAppbarWithBack(this);
 
+
         ActionBar bar = getSupportActionBar();
         if (bar != null) {
 
@@ -54,12 +56,9 @@ public class PersonalityActivity extends AppCompatActivity {
             bar.setDisplayShowCustomEnabled(true);
         }
 
-
         //mViewConinue = (View) findViewById(R.id.selectioncontinue);
 
         try {
-            //List<PerfumeXmlParser.Entry> entries = loadPerfumeXml();
-            //mFdbWheelers = loadPersonalityXml();
             mFdbWheelers = FdbHelper.loadPersonalityXml(this);
         } catch (IOException e) {
             Log.e("PersonalityActivity", e.getMessage());
@@ -86,6 +85,7 @@ public class PersonalityActivity extends AppCompatActivity {
         updateAppbar();
     }
 
+    /*
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -93,34 +93,18 @@ public class PersonalityActivity extends AppCompatActivity {
         return false;
     }
 
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        /*
-        if (id == R.id.action_settings) {
-            return true;
+        switch (item.getItemId()) {
+            // Respond to the action bar's Up/Home button
+            case android.R.id.home:
+                NavUtils.navigateUpFromSameTask(this);
+                return true;
         }
-        */
         return super.onOptionsItemSelected(item);
     }
-
-    public void showColorWheelButton() {
-        int iCount = 0;
-        for (FdbWheeler wheeler : mFdbWheelers) {
-            if (wheeler.mFlag == true) {
-                iCount++;
-            }
-        }
-
-        if (iCount == 3) {
-            mViewConinue.setVisibility(View.VISIBLE);
-        } else {
-            mViewConinue.setVisibility(View.INVISIBLE);
-        }
-    }
+    */
 
     public void updateAppbar() {
         int count = 3;
@@ -140,9 +124,7 @@ public class PersonalityActivity extends AppCompatActivity {
             iDp = 55;
             iVi = View.VISIBLE;
             tv.setText(R.string.go_to_colorwheel);
-        }
-        else
-        {
+        } else {
             tv.setText("" + count);
         }
 

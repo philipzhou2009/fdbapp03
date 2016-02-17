@@ -47,44 +47,6 @@ public class ColorWheel extends AppCompatActivity {
 
         Utils.enableAppbarWithBack(this);
 
-        // get screen size in pixel
-        /*
-        Display display = getWindowManager().getDefaultDisplay();
-        Point size = new Point();
-        display.getSize(size);
-        int width = size.x;
-        int height = size.y;
-        Log.e("fcw screen width=", Integer.toString(width));
-        Log.e("fcw screen height=", Integer.toString(height));
-
-        float mDiameterRatio = height / 1600.0f;
-        FdbHelper.mDiameterRatio = mDiameterRatio;
-        FdbHelper.mScreenHeight = height;
-        FdbHelper.mScreenWidth = width;
-
-        FdbAddition.mScreenHeight = height;
-
-
-        TypedValue tvv = new TypedValue();
-        if (getTheme().resolveAttribute(android.R.attr.actionBarSize, tvv, true))
-        {
-            int actionBarHeight = TypedValue.complexToDimensionPixelSize(tvv.data,getResources().getDisplayMetrics());
-            Log.e("actionBarHeight", "" + actionBarHeight);
-        }
-
-        */
-
-        /*
-        DisplayMetrics displayMetrics = this.getResources().getDisplayMetrics();
-        float dpHeight = displayMetrics.heightPixels / displayMetrics.density;
-        float dpWidth = displayMetrics.widthPixels / displayMetrics.density;
-        Log.e("fcw dpWidth=", Float.toString(dpWidth));
-        Log.e("fcw dpHeight=", Float.toString(dpHeight));
-        DisplayMetrics dm = this.getResources().getDisplayMetrics();
-        int densityDpi = dm.densityDpi;
-        Log.e("fcw densityDpi=", Integer.toString(densityDpi));
-        */
-
         try {
             mFdbWheelers = FdbHelper.loadPersonalityXml(this);
             mPerfumes = FdbHelper.loadPerfumeXml(this);
@@ -145,8 +107,6 @@ public class ColorWheel extends AppCompatActivity {
         }
         */
 
-
-
     }
 
     @Override
@@ -168,20 +128,12 @@ public class ColorWheel extends AppCompatActivity {
         int bgCwY = location[1];
         Log.e("bg_colorwheel X", "" + bgCwX);
         Log.e("bg_colorwheel Y", "" + bgCwY);
-        //FdbHelper.setmBgMarginTop(bgCwY);
 
         // central point
         int bgCwCX = bgCwWidth / 2;
         int bgCwCY = bgCwY + bgCwHeight / 2;
         Log.e("bgCwCX", "" + bgCwCX);
         Log.e("bgCwCY", "" + bgCwCY);
-
-        int iMarginLeft = (bgCwWidth - bgCwHeight) / 2;
-        int iMarginTop = bgCwY;
-
-
-        FdbHelper.setmMarginLeft(iMarginLeft);
-        FdbHelper.setmMarginTop(iMarginTop);
 
         FdbHelper.setmCenterX(bgCwCX);
         FdbHelper.setmCenterY(bgCwCY);
@@ -190,7 +142,6 @@ public class ColorWheel extends AppCompatActivity {
         FdbHelper.mDiameterRatio = mDiameterRatio;
         FdbHelper.mScreenHeight = bgCwHeight;
         FdbHelper.mScreenWidth = bgCwWidth;
-
         FdbAddition.mScreenHeight = bgCwHeight;
 
         RelativeLayout colorWheelLayout = (RelativeLayout) findViewById(R.id.colorWheelLayout);
@@ -240,23 +191,6 @@ public class ColorWheel extends AppCompatActivity {
         // flower
         this.drawFlower();
 
-
-        /*
-        for (FdbWheeler wheeler : mFdbWheelers) {
-            {
-                for (String select : mSelections) {
-                    if (wheeler.mName.equals(select)) {
-                        //TextView tv = wheeler.createTextView(this);
-                        TextView tv = wheeler.createHorizontalTextView(this);
-                        colorWheelLayout.addView(tv);
-                        float coordsXY[] = {wheeler.mRealX, wheeler.mRealY};
-                        coordsList.add(coordsXY);
-                    }
-                }
-            }
-        }
-        */
-
         // draw perfume titles
         for (PerfumeXmlParser.Entry perfume : mPerfumes) {
             View view = perfume.drawPerfume(this, mAdditions, false);
@@ -265,6 +199,7 @@ public class ColorWheel extends AppCompatActivity {
 
     }
 
+    /*
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -278,13 +213,14 @@ public class ColorWheel extends AppCompatActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-        /*
+
         if (id == R.id.action_settings) {
             return true;
         }
-        */
+
         return super.onOptionsItemSelected(item);
     }
+    */
 
     public void drawFlower() {
         int iCount = 0;
@@ -306,7 +242,7 @@ public class ColorWheel extends AppCompatActivity {
         FdbWheeler wheeler2 = aEntries.get(1);
         FdbWheeler wheeler3 = aEntries.get(2);
 
-        int flowerWidth = 50;
+        int flowerWidth = 30;
 
         float fCentralX = (wheeler1.mRealX + wheeler2.mRealX + wheeler3.mRealX) / 3 - flowerWidth / 2;
         float fCentralY = (wheeler1.mRealY + wheeler2.mRealY + wheeler3.mRealY) / 3 - flowerWidth / 2;

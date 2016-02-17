@@ -27,11 +27,11 @@
             android:gravity="center_horizontal">
 
             <ImageView
-                android:layout_width="141dp"
-                android:layout_height="190dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:id="@+id/imageView"
                 android:layout_gravity="center_horizontal"
-                android:src="@drawable/logo_gold_effect_hr_2_500"
+                android:src="@drawable/fdb_logo_flower_label"
                 android:layout_marginTop="50dp"
                 android:layout_marginBottom="10dp" />
 

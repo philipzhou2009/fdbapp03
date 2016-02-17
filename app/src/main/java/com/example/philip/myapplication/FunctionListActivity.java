@@ -41,8 +41,16 @@ public class FunctionListActivity extends AppCompatActivity {
                 startSomeActivity(v, PersonalityActivity.class);
             }
         });
+
+        final Button btnGallery = (Button) findViewById(R.id.btnGallery);
+        btnGallery.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startSomeActivity(v, GalleryActivity.class);
+            }
+        });
     }
 
+    /*
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -53,6 +61,7 @@ public class FunctionListActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+    */
 
     public void startWebsiteActivity(View v) {
         Log.i("FunctionListActivity", "startWebsiteActivity");

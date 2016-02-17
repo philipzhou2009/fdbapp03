@@ -6,14 +6,14 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:icon="@drawable/icon"
+        android:label="@string/fragrancedubois"
         android:screenOrientation="landscape"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
             android:name=".SplashActivity"
-            android:label="@string/title_activity_splash">
+            android:label="@string/fragrancedubois">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,6 +28,10 @@
             android:label="@string/features"
             android:parentActivityName=".LocalesActivity" />
         <activity
+            android:name=".PersonalityActivity"
+            android:label="@string/title_activity_personality"
+            android:parentActivityName=".FunctionListActivity" />
+        <activity
             android:name=".WebsiteActivity"
             android:label="@string/title_activity_website"
             android:parentActivityName=".FunctionListActivity" />
@@ -36,14 +40,23 @@
             android:label="@string/title_our_story"
             android:parentActivityName=".FunctionListActivity" />
         <activity
-            android:name=".PersonalityActivity"
-            android:label="@string/title_activity_personality"
-            android:parentActivityName=".FunctionListActivity" />
-        <activity
             android:name=".ColorWheel"
             android:label="@string/title_color_wheel"
             android:parentActivityName=".PersonalityActivity"
             android:screenOrientation="landscape" />
+        <activity
+            android:name=".ScreenSlideActivity"
+            android:label="@string/title_color_wheel"
+            android:parentActivityName=".ColorWheel"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".GalleryActivity"
+            android:label="@string/gallery"
+            android:parentActivityName=".FunctionListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.philip.myapplication.FunctionListActivity" />
+        </activity>
     </application>
 
 </manifest>

@@ -28,7 +28,7 @@ public class FdbWheelTriangle extends View {
     public FdbWheelTriangle(Context context, ArrayList<float[]> coordsList) {
         super(context);
         paint.setColor(context.getResources().getColor(R.color.gold));
-        paint.setStrokeWidth(2);
+        paint.setStrokeWidth(1);
 
         mCoordsList = coordsList;
         mContext = context;
