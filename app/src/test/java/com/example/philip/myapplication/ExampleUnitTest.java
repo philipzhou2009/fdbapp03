@@ -1,4 +1,4 @@
-package com.example.philip.myapplication;
+package com.fragrancedubois.sg.fdbapp03;
 
 import org.junit.Test;
 

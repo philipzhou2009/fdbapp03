@@ -1,7 +1,5 @@
 <resources>
     <string name="app_name">Mon Application</string>
-    <string name="hello_world">Bonjour le monde !</string>
-
     <string name="action_settings">Settings</string>
     <string name="edit_message">Enter a message</string>
     <string name="button_send">SEND</string>
@@ -16,19 +14,53 @@
     <string name="our_story_history_title">History</string>
     <string name="our_story_history_content">Fragrance Du Bois is a niche luxury perfume house born from the richest essences of nature, and crafted by fifth generation perfumers from the 17th Century French tradition of Grasse. Our exquisite fragrances will transport you to yesteryear, invoking long lost memories, fleeting feelings, and bursts of joy. Our beguiling creations will strike a chord with your deepest, most intimate and unique selves.</string>
     <string name="functions">fonction</string>
-    <string name="title_our_story">Our Story</string>
+    <string name="title_our_story">Notre histoire</string>
     <string name="our_story_inspiration_title">Inspiration</string>
     <string name="our_story_inspiration_content">Our inspiration stems from the beauty and purity of nature itself. At the heart of all Fragrance Du Bois’ creations is our signature Oud that exudes the ultimate in luxury, being both distinctive and unique. All the Oud used by Fragrance Du Bois is produced by Asia Plantation Capital, and is guaranteed to be ethically and sustainably sourced.</string>
     <string name="our_story_expertise_title">Expertise</string>
     <string name="title_activity_personality">Choose most suitable 3 personalities</string>
-    <string name="personality">Personality</string>
-    <string name="features">Features</string>
+    <string name="personality">Personnalité</string>
+    <string name="features">Caractéristiques</string>
     <string name="go_to_colorwheel">Color Wheel</string>
     <string name="title_color_wheel">Color Wheel</string>
     <string name="action_previous">Previous</string>
     <string name="action_finish">Finish</string>
     <string name="action_next">Next</string>
     <string name="fragrancedubois">Fragrance Du Bois</string>
-    <string name="story">Story</string>
+    <string name="story">récit</string>
     <string name="app_about">App</string>
+    <string name="locales">Locales</string>
+    <string name="select_personality">Sélectionnez 3 Personnalités</string>
+    <string name="title_activity_website">Fragrance Du Bois Site Internet</string>
+
+    <string name="p_Passionate">Passionné</string>
+    <string name="p_Sexy">Sexy</string>
+    <string name="p_Energetic">Énergétique</string>
+    <string name="p_Lively">Vivant</string>
+    <string name="p_Sensual">Sensuel</string>
+    <string name="p_Optimistic">Optimiste</string>
+    <string name="p_Joyful">Joyeux</string>
+    <string name="p_Happy">Heureux</string>
+    <string name="p_Natural">Naturel</string>
+    <string name="p_Fresh">Frais</string>
+    <string name="p_Harmonious">Harmonieux</string>
+    <string name="p_Inspired">Inspiré</string>
+    <string name="p_Refreshed">Rafraichi</string>
+    <string name="p_Relaxed">Reposé</string>
+    <string name="p_Charming">Charmant</string>
+    <string name="p_Romantic">Romantique</string>
+    <string name="p_Soothed">Apaisant</string>
+    <string name="p_Artistic">Artistique</string>
+    <string name="p_Creative">Créatif</string>
+    <string name="p_Opulent">Opulent</string>
+    <string name="p_Sophisticated">Sophistiqué</string>
+    <string name="p_Trusted">Rassurant</string>
+    <string name="p_Confident">Confiant</string>
+    <string name="p_Stable">Stable</string>
+    <string name="p_Calm">Calme</string>
+    <string name="p_Tranquil">Tranquille</string>
+    <string name="p_Dangerous">Dangereux</string>
+    <string name="p_Intriguing">Intriguant</string>
+    <string name="p_Mysterious">Mystérieux</string>
+    <string name="p_Assertive">Affirmé</string>
 </resources>

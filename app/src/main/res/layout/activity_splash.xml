@@ -5,8 +5,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    style="@style/FDBWindowStyle"
-    >
+    style="@style/FDBWindowStyle">
 
     <ImageView
         android:id="@+id/imageView"

@@ -34,5 +34,40 @@
     <string name="story">Story</string>
     <string name="app_about">App</string>
     <string name="title_activity_gallery">GalleryActivity</string>
+    <string name="locales">Locales</string>
+    <string name="title_activity_app">AppActivity</string>
+    <string name="select_personality">Select 3 Personalities</string>
+
+    <string name="p_Passionate">Passionate</string>
+    <string name="p_Sexy">Sexy</string>
+    <string name="p_Energetic">Energetic</string>
+    <string name="p_Lively">Lively</string>
+    <string name="p_Sensual">Sensual</string>
+    <string name="p_Optimistic">Optimistic</string>
+    <string name="p_Joyful">Joyful</string>
+    <string name="p_Happy">Happy</string>
+    <string name="p_Natural">Natural</string>
+    <string name="p_Fresh">Fresh</string>
+    <string name="p_Harmonious">Harmonious</string>
+    <string name="p_Inspired">Inspired</string>
+    <string name="p_Refreshed">Refreshed</string>
+    <string name="p_Relaxed">Relaxed</string>
+    <string name="p_Charming">Charming</string>
+    <string name="p_Romantic">Romantic</string>
+    <string name="p_Soothed">Soothed</string>
+    <string name="p_Artistic">Artistic</string>
+    <string name="p_Creative">Creative</string>
+    <string name="p_Opulent">Opulent</string>
+    <string name="p_Sophisticated">Sophisticated</string>
+    <string name="p_Trusted">Trusted</string>
+    <string name="p_Confident">Confident</string>
+    <string name="p_Stable">Stable</string>
+    <string name="p_Calm">Calm</string>
+    <string name="p_Tranquil">Tranquil</string>
+    <string name="p_Dangerous">Dangerous</string>
+    <string name="p_Intriguing">Intriguing</string>
+    <string name="p_Mysterious">Mysterious</string>
+    <string name="p_Assertive">Assertive</string>
+
 
 </resources>

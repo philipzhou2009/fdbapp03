@@ -23,10 +23,12 @@
             style="@style/FDBButtonStyle"
             android:text="@string/consultant" />
 
+        <!--
         <Button
             android:id="@+id/btnGallery"
             style="@style/FDBButtonStyle"
             android:text="@string/gallery" />
+        -->
 
         <Button
             android:id="@+id/btnWebsite"

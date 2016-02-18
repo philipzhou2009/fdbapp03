@@ -175,8 +175,7 @@
             android:layout_height="fill_parent"
             android:id="@+id/fcwdimlayer"
             android:foreground="#000000"
-            android:alpha="0">
-        </FrameLayout>
+            android:alpha="0"></FrameLayout>
 
 
     </RelativeLayout>

@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/FDBWindowStyle"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:configChanges="keyboardHidden|orientation"
+    android:screenOrientation="landscape">
+
+    <include layout="@layout/bg_general" />
+
+    <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_centerInParent="true"
+        android:alignmentMode="alignBounds"
+        android:columnCount="1"
+
+        android:columnOrderPreserved="false"
+        android:useDefaultMargins="true">
+
+        <Button
+            android:id="@+id/buttonEn"
+            style="@style/FDBButtonStyle"
+            android:text="@string/button_english" />
+
+        <Button
+            android:id="@+id/buttonFr"
+            style="@style/FDBButtonStyle"
+            android:text="@string/button_french" />
+
+        <!--
+        <Button
+            android:id="@+id/buttonCh"
+            style="@style/FDBButtonStyle"
+            android:text="@string/button_chinese" />
+        -->
+
+    </GridLayout>
+
+
+</RelativeLayout>
