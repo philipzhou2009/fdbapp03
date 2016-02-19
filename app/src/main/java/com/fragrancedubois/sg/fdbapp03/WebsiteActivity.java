@@ -3,9 +3,12 @@ package com.fragrancedubois.sg.fdbapp03;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class WebsiteActivity extends AppCompatActivity {
@@ -20,6 +23,15 @@ public class WebsiteActivity extends AppCompatActivity {
         Utils.enableAppbarWithBack(this);
 
         WebView webview = (WebView) findViewById(R.id.webview);
+
+        if(!Utils.getNetworkConnection(this))
+        {
+            LinearLayout warning = (LinearLayout) findViewById(R.id.networkwarninglayout);
+            webview.setVisibility(View.INVISIBLE);
+            warning.setVisibility(View.VISIBLE);
+            return;
+        }
+
 
         // Let's display the progress in the activity title bar, like the
         // browser app does.
