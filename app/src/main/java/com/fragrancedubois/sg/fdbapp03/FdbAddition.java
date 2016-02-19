@@ -126,9 +126,20 @@ public class FdbAddition extends FdbWheeler implements Parcelable {
         //Log.e("fcw", "createTextViewWithEvent");
         TextView tv;
         tv = new TextView(activity);
-        tv.setText(mName);
-        tv.setTextSize(18);
-        tv.setTextColor(Color.WHITE);
+        //activity.getResources().getString()
+        //tv.setText(mName);
+        int noteId = Utils.getResId(mName, R.string.class);
+        if(noteId != -1)
+        {
+            tv.setText(noteId);
+        }
+        else {
+            tv.setText(mName);
+        }
+
+        tv.setTextSize(20);
+        //tv.setTextColor(Color.WHITE);
+        tv.setTextColor(activity.getResources().getColor(R.color.gold));
         tv.setRotation(mDegree);
         tv.setShadowLayer((float) 0.1, 4, 3, Color.BLACK);
         tv.setTypeface(null, Typeface.BOLD);
@@ -148,7 +159,15 @@ public class FdbAddition extends FdbWheeler implements Parcelable {
                 imageView.setImageResource(mImageResId);
 
                 TextView textView = (TextView) popupView.findViewById(R.id.popup_name);
-                textView.setText(mName);
+                //textView.setText(mName);
+                int noteId = Utils.getResId(mName, R.string.class);
+                if(noteId != -1)
+                {
+                    textView.setText(noteId);
+                }
+                else {
+                    textView.setText(mName);
+                }
 
                 popupWindow.showAtLocation(parentView, Gravity.CENTER, 0, 0);
 

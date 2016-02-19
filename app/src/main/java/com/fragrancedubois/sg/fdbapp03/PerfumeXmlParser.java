@@ -6,6 +6,8 @@ import android.graphics.Color;
 import android.util.Log;
 import android.util.Xml;
 import android.view.View;
+import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -80,16 +82,18 @@ public class PerfumeXmlParser {
         public final float mYcoord;
         final float mLX = 800f;
         final float mLY = 150f;
-        //final float mLX = 740f;
-        //final float mLY = 225f;
         float mRealX = 0;
         float mRealY = 0;
+
+        public int iCww;
+        public int iCwh;
 
         View mFlower = null;
         View mView;
 
         private Entry(String title, String perfumer, String topnotes, String middlenotes,
-                      String basenodes, String thumbnail, String themecolor, String fontcolor, String portrait, String profile, String cwx, String cwy) {
+                      String basenodes, String thumbnail, String themecolor, String fontcolor,
+                      String portrait, String profile, String cwx, String cwy, String cww, String cwh) {
             this.title = title;
             this.perfumer = perfumer;
             this.topnotes = topnotes;
@@ -106,6 +110,9 @@ public class PerfumeXmlParser {
             this.mYcoord = Float.parseFloat(cwy);
             //this.mRealY = FdbHelper.fdbHelperCalcYCoord(mYcoord);
             //this.mRealX = FdbHelper.fdbHelperCalcXCoord(mXcoord);
+
+            iCww = Integer.parseInt(cww);
+            iCwh = Integer.parseInt(cwh);
         }
 
         public Entry(Entry parentEntry) {
@@ -237,21 +244,42 @@ public class PerfumeXmlParser {
                 this.mRealY = FdbHelper.fdbHelperCalcYCoord(mYcoord);
                 this.mRealX = FdbHelper.fdbHelperCalcXCoord(mXcoord);
 
+                /*
                 TextView tv = new TextView(activity);
-
                 tv.setText(this.title);
                 tv.setTextColor(Color.WHITE);
-
                 tv.measure(0, 0);       //must call measure!
                 int mh = tv.getMeasuredHeight(); //get height
                 int mw = tv.getMeasuredWidth();
 
                 int finalX = (int) (mRealX - mw / 2);
                 int finalY = (int) (mRealY);
+
                 tv.setX(finalX);
                 tv.setY(finalY);
 
                 mView = tv;
+                */
+
+                Button btn = new Button(activity);
+                btn.setVisibility(View.VISIBLE);
+                btn.setBackgroundColor(Color.TRANSPARENT);
+
+                int finalX = (int) (mRealX);
+                int finalY = (int) (mRealY);
+                btn.setX(finalX);
+                btn.setY(finalY);
+                mView = btn;
+
+                // http://stackoverflow.com/questions/6040218/how-can-we-change-the-button-size-in-java-code
+                int width = FdbHelper.fdbHelperCalcLength(iCww);
+                int height = FdbHelper.fdbHelperCalcLength(iCwh);
+
+                btn.setLayoutParams(new LinearLayout.LayoutParams(
+                        FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT));
+                //btn.setWidth(width);
+                btn.setHeight(height);
+                btn.getLayoutParams().width= width;
 
                 Log.e("perfume title", title);
                 Log.e("perfume mXcoord", "" + mXcoord);
@@ -262,6 +290,9 @@ public class PerfumeXmlParser {
 
                 Log.e("perfume finalX", "" + finalX);
                 Log.e("perfume finalY", "" + finalY);
+
+                Log.e("perfume width", "" + width);
+                Log.e("perfume height", "" + height);
             }
 
             // convert List to ArrayList
@@ -324,6 +355,8 @@ public class PerfumeXmlParser {
         String cwx = null;
         String cwy = null;
 
+        String cww = null;
+        String cwh = null;
         while (parser.next() != XmlPullParser.END_TAG) {
             if (parser.getEventType() != XmlPullParser.START_TAG) {
                 continue;
@@ -353,11 +386,17 @@ public class PerfumeXmlParser {
                 cwx = readByNoteName(parser, name);
             } else if (name.equals("cwy")) {
                 cwy = readByNoteName(parser, name);
-            } else {
+            } else if (name.equals("cww")) {
+                cww = readByNoteName(parser, name);
+            } else if (name.equals("cwh")) {
+                cwh = readByNoteName(parser, name);
+            }
+
+            else {
                 skip(parser);
             }
         }
-        return new Entry(title, perfumer, topnotes, middlenotes, basenotes, thumbnail, themecolor, fontcolor, portrait, profile, cwx, cwy);
+        return new Entry(title, perfumer, topnotes, middlenotes, basenotes, thumbnail, themecolor, fontcolor, portrait, profile, cwx, cwy, cww, cwh);
     }
 
     // Processes title tags in the feed.

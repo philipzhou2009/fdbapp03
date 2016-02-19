@@ -35,8 +35,10 @@
     <string name="app_about">App</string>
     <string name="title_activity_gallery">GalleryActivity</string>
     <string name="locales">Locales</string>
-    <string name="title_activity_app">AppActivity</string>
+    <string name="title_activity_app">About This App</string>
     <string name="select_personality">Select 3 Personalities</string>
+    <string name="build">Build</string>
+    <string name="version">Version</string>
 
     <string name="p_Passionate">Passionate</string>
     <string name="p_Sexy">Sexy</string>
@@ -68,6 +70,108 @@
     <string name="p_Intriguing">Intriguing</string>
     <string name="p_Mysterious">Mysterious</string>
     <string name="p_Assertive">Assertive</string>
+    <string name="copyright">Fragrance Du Bois. 2015© All Rights Reserved.</string>
 
+    <string name="by">By</string>
+    <string name="topnotes">Top Notes</string>
+    <string name="middlenotes">Middle Notes</string>
+    <string name="basenotes">Base Notes</string>
+    <string name="oud100">All our fragrances contain 100% organic Oud oil from sustainable sources</string>
+    <string name="oud101">100% pure organic vintage Oud</string>
 
+    <string name="Cardamom">Cardamom</string>
+    <string name="Nutmeg">Nutmeg</string>
+    <string name="Mandarin">Mandarin</string>
+
+    <string name="Frankincense">Frankincense</string>
+    <string name="Ciste">Ciste</string>
+    <string name="Myrrh_Essence">Myrrh Essence</string>
+    <string name="Amber">Amber</string>
+
+    <string name="Opoponax_Resinoid">Opoponax Resinoid</string>
+    <string name="Myrrh">Myrrh</string>
+    <string name="Resinoid">Resinoid</string>
+    <string name="Styrax">Styrax</string>
+    <string name="Benzoin">Benzoin</string>
+
+    <string name="Bergamot">Bergamot</string>
+    <string name="Rose">Rose</string>
+    <string name="Jasmin">Jasmin</string>
+    <string name="Sandalwood">Sandalwood</string>
+    <string name="Saffron">Saffron</string>
+    <string name="Patchouli">Patchouli</string>
+    <string name="Vanilla">Vanilla</string>
+    <string name="Musk">Musk</string>
+
+    <string name="Coconut">Coconut</string>
+    <string name="Fruits">Fruits</string>
+    <string name="Vanilla_Bourbon">Vanilla Bourbon</string>
+    <string name="Monoi">Monoi</string>
+    <string name="Ylang_Ylang">Ylang Ylang</string>
+    <string name="Pineapple">Pineapple</string>
+    <string name="Water_Fruits">Water Fruits</string>
+    <string name="Orange_Blossom">Orange Blossom</string>
+    <string name="White_Flowers">White Flowers</string>
+    <string name="Salicylate">Salicylate</string>
+    <string name="Lactonic">Lactonic</string>
+    <string name="Lemon">Lemon</string>
+    <string name="Pink_Pepper">Pink Pepper</string>
+    <string name="Cedarwood">Cedarwood</string>
+
+    <string name="Fruit">Fruit</string>
+    <string name="Geranium">Geranium</string>
+    <string name="Ginger">Ginger</string>
+    <string name="Coriander_Seeds">Coriander Seeds</string>
+    <string name="Vetiver">Vetiver</string>
+    <string name="Black_Pepper">Black Pepper</string>
+    <string name="Elemi">Elemi</string>
+    <string name="Tonka_Bean">Tonka Bean</string>
+    <string name="Cistus">Cistus</string>
+    <string name="Soft_Amber">Soft Amber</string>
+
+    <string name="profile01">Born in Grasse, France, François is a fifth generation French perfumer – his
+            grandfather created the world-renowned Anaïs Anaïs. He brings a wealth of experience
+            from a career spanning more than 25 years, and has been a guiding light in his tenures
+            at SARL Creative Scents andSARL Creations and Parfums.</string>
+
+    <string name="profile02">After studying Chemistry, Guillaume enrolled at the ISIPCA (Institut Supérieur
+            International du Parfum de la Cosmétique et de l’Aromatique Alimentaire). In 1998,
+            following his dream to enter the world of perfumery, he joined in the promotion of MST
+            ISIPCA’s Bel Aesthète. With a desire to broaden his knowledge and further develop his
+            creativity, Guillaume then studied at the Givaudan School of Perfumery, and in 2003, at
+            the age of 27, joined the Fine Fragrance team of Perfumers at Givaudan, Paris.</string>
+
+    <string name="profile03">Born in Cannes, France, Caroline studied at the prestigious from ISIPCA (Institut
+            Supérieur International du Parfum de la Cosmétique et de l’Aromatique Alimentaire) in
+            Versailles for two years, and finished her studies at Chanel in Paris before officially
+            becoming a perfumer. She joined Fragrance Resources in New York in 1997, before coming
+            to Givaudan in 2003.</string>
+    <string name="profile04">Nathalie grew up in Grasse, and after receiving a doctorate in Pharmaceuticals, she
+            followed her passion for fragrances, enrolling at the Givaudan School of Perfumery. At
+            the age of 29, she joined the team of Fine Fragrance perfumers in Paris. Her enthusiasm,
+            creativity, and expertise have brought a new dimension to Fragrance Du Bois’ most
+            optimistic fragrance.</string>
+    <!--
+    <string name="profile05">After studying Chemistry, Guillaume enrolled at the ISIPCA (Institut Supérieur
+            International du Parfum de la Cosmétique et de l’Aromatique Alimentaire). In 1998,
+            following his dream to enter the world of perfumery, he joined in the promotion of MST
+            ISIPCA’s Bel Aesthète. With a desire to broaden his knowledge and further develop his
+            creativity, Guillaume then studied at the Givaudan School of Perfumery, and in 2003, at
+            the age of 27, joined the Fine Fragrance team of Perfumers at Givaudan, Paris.</string>
+            -->
+    <string name="profile06">Hamid’s interest in perfumery was stimulated by an invitation from family friends
+            to visit a rose plantation in Ghamsar – an ancient city famous for its rose
+            cultivations, and located in the central Iranian desert. Hamid was so fascinated by what
+            he experienced on his visit – the fragrant fields; the spectacle of rose pickers and the
+            distillation process, that a whole new world opened up to him.</string>
+    <string name="profile07">After graduating in 1990 from ISIPCA (Institut Supérieur International duParfum de
+            la Cosmétique et de l’Aromatique Alimentaire), Olivier was engaged by Parfums Annick
+            Goutal. He joined the Kao Corporation in 1993, and five years later started at Givaudan.
+            Working with Jean Amic, Olivier discovered and developed his love for prestige
+            perfumery, and is passionate about broadening his expertise as well as his horizons.</string>
+    <string name="profile08">Alexandra has dreamt of being a perfumer since the age of twelve. Strong-minded and
+            determined, she studied for her Deug A, at ISIPCA (Institut Supérieur International du
+            Parfum de la Cosmétique et de l’Aromatique Alimentaire) and finished top of her class.
+            She began working at Quest as an assistant perfumer, before progressing to junior
+            perfumer. Today, Alexandra is fulfilling her life’s ambition as a perfumer at Givaudan.</string>
 </resources>

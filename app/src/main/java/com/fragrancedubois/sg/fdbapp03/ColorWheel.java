@@ -31,6 +31,8 @@ public class ColorWheel extends AppCompatActivity {
     public PopupWindow mPW;
     public ImageView mFlower;
 
+    private boolean focused = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -106,6 +108,15 @@ public class ColorWheel extends AppCompatActivity {
     public void onWindowFocusChanged(boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);
 
+        if(focused)
+        {
+            return;
+        }
+        else
+        {
+            focused = true;
+        }
+
         ImageView bgCw = (ImageView) findViewById(R.id.bg_colorwheel);
         int bgCwWidth = bgCw.getWidth();
         int bgCwHeight = bgCw.getHeight();
@@ -139,15 +150,6 @@ public class ColorWheel extends AppCompatActivity {
 
         RelativeLayout colorWheelLayout = (RelativeLayout) findViewById(R.id.colorWheelLayout);
         mCWLayout = colorWheelLayout;
-
-        /*
-        Context mContext = this.getBaseContext();
-        TextView tvc = new TextView(mContext);
-        tvc.setText("X");
-        tvc.setX(bgCwCX);
-        tvc.setY(bgCwCY);
-        colorWheelLayout.addView(tvc);
-        */
 
         if (false) {
             for (FdbWheeler wheeler : mFdbWheelers) {
@@ -190,6 +192,12 @@ public class ColorWheel extends AppCompatActivity {
             colorWheelLayout.addView(view);
         }
         */
+
+        // perfume
+        for (PerfumeXmlParser.Entry perfume : mPerfumes) {
+            View view = perfume.drawPerfume(this, mAdditions, false);
+            colorWheelLayout.addView(view);
+        }
 
     }
 

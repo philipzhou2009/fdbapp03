@@ -118,17 +118,23 @@ public class ScreenSlidePageFragment extends Fragment {
 
         }
 
+        String sTmp = "";
+
+        // theme
         String themecolor = perfumedata.get(2);
         LinearLayout perfumeView = (LinearLayout) rootView.findViewById(R.id.perfume);
         perfumeView.setBackgroundColor(Color.parseColor(themecolor));
 
+        // perfume
         String perfumeTitle = perfumedata.get(0);
         TextView titleView = (TextView) rootView.findViewById(R.id.perfumeTitle);
         titleView.setText(perfumeTitle);
 
+        // perfumer
         String perfumerName = perfumedata.get(6);
         TextView perfumerNameView = (TextView) rootView.findViewById(R.id.perfumerName);
-        perfumerNameView.setText("BY " + perfumerName);
+        sTmp = getActivity().getString(R.string.by) + " " + perfumerName;
+        perfumerNameView.setText(sTmp);
 
         Activity activity = getActivity();
         final View parentView = activity.findViewById(R.id.pager);
@@ -169,7 +175,17 @@ public class ScreenSlidePageFragment extends Fragment {
                         }
                         if (bFlag == false) {
                             textView = new TextView(activity);
-                            textView.setText(noteNameNew);
+
+                            int noteId = Utils.getResId(noteNameNew, R.string.class);
+                            if(noteId != -1)
+                            {
+                                textView.setText(noteId);
+                            }
+                            else {
+                                textView.setText(noteNameNew);
+                            }
+
+                            //textView.setText(noteNameNew);
                             textView.setTextSize(18);
                             textView.setTextColor(Color.WHITE);
                             //textView.setTypeface(Typeface.MONOSPACE);
@@ -197,7 +213,16 @@ public class ScreenSlidePageFragment extends Fragment {
 
             String profile = perfumedata.get(9);
             TextView profileView = (TextView) rootView.findViewById(R.id.perfumerProfile);
-            profileView.setText(profile);
+
+            int strId = Utils.getResId(profile, R.string.class);
+            if(strId != -1)
+            {
+                profileView.setText(strId);
+            }
+            else {
+                profileView.setText(profile);
+            }
+            //profileView.setText(profile);
         }
 
         return rootView;

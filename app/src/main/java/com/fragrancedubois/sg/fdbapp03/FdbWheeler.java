@@ -187,7 +187,16 @@ public class FdbWheeler implements Comparable<FdbWheeler> {
 
     public TextView createTextView1(final Activity activity) {
         TextView tv = new TextView(activity);
-        tv.setText(mName);
+        //tv.setText(mName);
+        int noteId = Utils.getResId("p_" + mName, R.string.class);
+        if(noteId != -1)
+        {
+            tv.setText(noteId);
+        }
+        else {
+            tv.setText(mName);
+        }
+
         tv.setTextColor(Color.WHITE);
         //tv.setRotation(mDegree);
         //tv.setShadowLayer(2, 0, 0, Color.BLACK);

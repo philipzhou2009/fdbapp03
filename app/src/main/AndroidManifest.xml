@@ -13,7 +13,8 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".SplashActivity"
-            android:label="@string/fragrancedubois">
+            android:label="@string/fragrancedubois"
+            android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,11 +23,13 @@
         </activity>
         <activity
             android:name=".LocalesActivity"
-            android:label="@string/locales" />
+            android:label="@string/locales"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".FunctionListActivity"
             android:label="@string/features"
-            android:parentActivityName=".LocalesActivity" />
+            android:parentActivityName=".LocalesActivity"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".PersonalityActivity"
             android:label="@string/personality"
@@ -35,11 +38,13 @@
         <activity
             android:name=".WebsiteActivity"
             android:label="@string/title_activity_website"
-            android:parentActivityName=".FunctionListActivity" />
+            android:parentActivityName=".FunctionListActivity"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".AboutActivity"
             android:label="@string/title_our_story"
-            android:parentActivityName=".FunctionListActivity" />
+            android:parentActivityName=".FunctionListActivity"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".ColorWheel"
             android:label="@string/consultant"
@@ -62,7 +67,7 @@
             android:name=".AppActivity"
             android:label="@string/title_activity_app"
             android:parentActivityName=".FunctionListActivity"
-            android:theme="@style/AppTheme">
+            android:screenOrientation="landscape">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.fragrancedubois.sg.fdbapp03.FunctionListActivity" />

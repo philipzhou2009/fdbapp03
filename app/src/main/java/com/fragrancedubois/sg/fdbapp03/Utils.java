@@ -3,12 +3,14 @@ package com.fragrancedubois.sg.fdbapp03;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.Window;
@@ -63,16 +65,23 @@ public class Utils {
 
     // app bar
     static public void enableAppbarWithBack(AppCompatActivity activity) {
+
         Toolbar myToolbar = (Toolbar) activity.findViewById(R.id.my_toolbar);
         activity.setSupportActionBar(myToolbar);
 
         // Get a support ActionBar corresponding to this toolbar
         ActionBar ab = activity.getSupportActionBar();
 
-        //ab.setTitle(R.string.features);
 
         // Enable the Up button
         ab.setDisplayHomeAsUpEnabled(true);
+
+        String label = getActivityLabel(activity);
+        if (label != null) {
+            ab.setTitle(label);
+        }
+
+
     }
 
     // tools
@@ -98,5 +107,22 @@ public class Utils {
         int iDp = (int) (iPx / displayMetrics.density);
 
         return iDp;
+    }
+
+    /*
+    http://stackoverflow.com/questions/1457803/how-do-i-access-androidlabel-for-an-activity
+     */
+    static public String getActivityLabel(Activity activity) {
+        String label = null;
+        try {
+            label = activity.getResources().getString(
+                    activity.getPackageManager().getActivityInfo(
+                            activity.getComponentName(), 0).labelRes);
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+        Log.d("Utils", "Activity Label: " + label);
+
+        return label;
     }
 }

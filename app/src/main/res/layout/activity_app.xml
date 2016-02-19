@@ -1,34 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/FDBWindowStyle"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    tools:context="com.fragrancedubois.sg.fdbapp03.AppActivity">
+    android:screenOrientation="landscape">
 
-    <android.support.design.widget.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
+    <include layout="@layout/appbar" />
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+    <include layout="@layout/bg_general" />
 
-    </android.support.design.widget.AppBarLayout>
+    <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
-    <include layout="@layout/content_app" />
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        android:src="@android:drawable/ic_dialog_email" />
+
+        android:layout_centerInParent="true"
+        android:alignmentMode="alignBounds"
+        android:columnCount="1"
+
+        android:columnOrderPreserved="false"
+        android:useDefaultMargins="true">
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/fdb_logo_w406" />
+
+
+        <TextView
+            android:id="@+id/versionname"
+            style="@style/FDBAppAbout"
+
+
+            />
+
+        <TextView
+            android:id="@+id/builddate"
+            style="@style/FDBAppAbout"
+
+            />
+
+        <TextView
+            android:id="@+id/copyright"
+            style="@style/FDBAppAbout"
+            android:text="@string/copyright"
+
+            />
+    </GridLayout>
+
+
+</RelativeLayout>
+
+    <!--
+    <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        style="@style/FDBWindowStyle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:context="com.fragrancedubois.sg.fdbapp03.AppActivity">
+
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </android.support.design.widget.AppBarLayout>
+
+            <include layout="@layout/content_app" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/fab_margin"
+            android:src="@android:drawable/ic_dialog_email" />
+
+
+
 
 </android.support.design.widget.CoordinatorLayout>
+-->

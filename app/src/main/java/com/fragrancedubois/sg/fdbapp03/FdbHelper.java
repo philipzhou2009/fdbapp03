@@ -337,6 +337,10 @@ public class FdbHelper {
         return result;
     }
 
+    public static int fdbHelperCalcLength(int length) {
+        return (int) (length * mDiameterRatio);
+    }
+
 
     public static int getmCenterX() {
         return mCenterX;

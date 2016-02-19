@@ -7,7 +7,7 @@
     <string name="button_french">français</string>
     <string name="button_chinese">chinois</string>
     <string name="button_japanese">Japonais</string>
-    <string name="consultant">consultant</string>
+    <string name="consultant">Consultant</string>
     <string name="gallery">Galerie</string>
     <string name="website">Internet</string>
     <string name="button_about">sur</string>
@@ -32,6 +32,9 @@
     <string name="locales">Locales</string>
     <string name="select_personality">Sélectionnez 3 Personnalités</string>
     <string name="title_activity_website">Fragrance Du Bois Site Internet</string>
+    <string name="title_activity_app">Propos de cette appli</string>
+    <string name="build">Construire</string>
+    <string name="version">Version</string>
 
     <string name="p_Passionate">Passionné</string>
     <string name="p_Sexy">Sexy</string>
@@ -63,4 +66,78 @@
     <string name="p_Intriguing">Intriguant</string>
     <string name="p_Mysterious">Mystérieux</string>
     <string name="p_Assertive">Affirmé</string>
+    <string name="copyright">Fragrance Du Bois. 2016© Tous les droits sont réservés.</string>
+
+
+    <string name="by">PAR</string>
+    <string name="topnotes">Notes de tête</string>
+    <string name="middlenotes">Notes de cœur</string>
+    <string name="basenotes">Notes de base</string>
+    <string name="oud100">Tous nos parfums contiennent de l’huile d’Oud 100% organique issue de sources durables.</string>
+    <string name="oud101">Huile d’Oud vintage, organique et pure à 100%</string>
+
+    <string name="Cardamom">Cardamome</string>
+    <string name="Nutmeg">Noix de Muscade</string>
+    <string name="Mandarin">Mandarine</string>
+
+    <string name="Frankincense">Encens</string>
+    <string name="Ciste">Ciste</string>
+    <string name="Myrrh_Essence">Essence de Myrrhe</string>
+    <string name="Amber">Ambre</string>
+
+    <string name="Opoponax_Resinoid">Résine d’Opoponax</string>
+    <string name="Myrrh">Résine de Myrrhe</string>
+    <string name="Resinoid">Resinoid</string>
+    <string name="Styrax">Styrax</string>
+    <string name="Benzoin">Benjoin</string>
+
+    <string name="Bergamot">Bergamote</string>
+    <string name="Rose">Rose</string>
+    <string name="Jasmin">Jasmin</string>
+    <string name="Sandalwood">Bois de Santal</string>
+    <string name="Saffron">Safran</string>
+    <string name="Patchouli">Patchouli</string>
+    <string name="Vanilla">Vanille</string>
+    <string name="Musk">Musc</string>
+
+    <string name="Coconut">Noix de Coco</string>
+    <string name="Fruits">Fruits</string>
+    <string name="Vanilla_Bourbon">Bourbon de Vanille</string>
+    <string name="Monoi">Monoï</string>
+    <string name="Ylang_Ylang">Ylang-Ylang</string>
+    <string name="Pineapple">Ananas</string>
+    <string name="Water_Fruits">Fruits d’Eau</string>
+    <string name="Orange_Blossom">Fleur d’Oranger</string>
+    <string name="White_Flowers">Fleurs Blanches</string>
+    <string name="Salicylate">Salicylate</string>
+    <string name="Lactonic">Lactonic</string>
+    <string name="Lemon">Citron</string>
+    <string name="Pink_Pepper">Baies roses</string>
+    <string name="Cedarwood">Bois de Cedar</string>
+
+    <string name="Fruit">Fruits</string>
+    <string name="Geranium">Géranium</string>
+    <string name="Ginger">Gingembre</string>
+    <string name="Coriander_Seeds">Graines de Coriandre</string>
+    <string name="Vetiver">Vétiver</string>
+    <string name="Black_Pepper">Poivre Noir</string>
+    <string name="Elemi">Elémi</string>
+    <string name="Tonka_Bean">Fève de Tonka</string>
+    <string name="Cistus">Cistus</string>
+    <string name="Soft_Amber">Douce Ambre</string>
+
+    <string name="profile01">"Né à Grasse, en France, François est issu de cinq générations de parfumeurs français : c'est son grand-père qui a créé le célèbre Anaïs Anaïs. Fort de toute la richesse d'une carrière longue de plus de 25 ans, il éclaire de ses lumières les postes qu'il occupe au sein de SARL Creative Scents et SARL Creations and Parfums."</string>
+    <string name="profile02">"Après des études de chimie, Guillaume s'inscrit à l'ISIPCA (Institut Supérieur International du Parfum de la Cosmétique et de l’Aromatique Alimentaire). En 1998, à la poursuite de son rêve d'entrer dans le monde de la parfumerie, il rejoint la promotion Bel Aesthète de la MST ISIPCA. Désireux d'approfondir sa connaissance et de développer encore sa créativité, Guillaume étudie ensuite au sein de l'École de parfumerie Givaudan ; en 2003, à l'âge de 27 ans, il intègre l'équipe de Parfumerie Fine de Givaudan Paris."</string>
+    <string name="profile03">"Née à Cannes, en France, Caroline a effectué deux ans d'études au sein du prestigieux ISIPCA (Institut Supérieur International du Parfum de la Cosmétique et de l’Aromatique Alimentaire) à Versailles, et complété sa formation chez Chanel à Paris avant de devenir officiellement parfumeuse.  Elle intègre Fragrance Resources à New York en 1997, avant de rejoindre l'équipe de Givaudan en 2003."</string>
+    <string name="profile04">"Nathalie a grandi à Grasse. Après avoir décroché un doctorat en Pharmacie, elle choisit de s'adonner à sa passion et s'inscrit à l'École de parfumerie Givaudan. À 29 ans, elle intègre l'équipe de Parfumerie Fine de Paris. Son enthousiasme, sa créativité et son expertise confèrent une nouvelle dimension à la fragrance la plus optimiste de Fragrance Du Bois."</string>
+
+    <!--<string name="profile05">After studying Chemistry, Guillaume enrolled at the ISIPCA (Institut Supérieur
+            International du Parfum de la Cosmétique et de l’Aromatique Alimentaire). In 1998,
+            following his dream to enter the world of perfumery, he joined in the promotion of MST
+            ISIPCA’s Bel Aesthète. With a desire to broaden his knowledge and further develop his
+            creativity, Guillaume then studied at the Givaudan School of Perfumery, and in 2003, at
+            the age of 27, joined the Fine Fragrance team of Perfumers at Givaudan, Paris.</string>-->
+    <string name="profile06">"L'intérêt de Hamid pour l'art de la parfumerie s'est trouvé avivé par l'invitation d'un ami de la famille à visiter une plantation de roses à Ghamsar, Cité antique célèbre pour ses roses, et située au cœur du désert de l'Iran. Hamid éprouva lors de cette visite une telle fascination pour ces champs parfumés, pour le spectacle des cueilleuses de roses et pour le procédé de distillation, qu'un horizon nouveau s'ouvrit devant lui."</string>
+    <string name="profile07">"En 1990, tout frais émoulu de l'ISIPCA (Institut Supérieur International du Parfum de la Cosmétique et de l’Aromatique Alimentaire), Olivier est embauché par Parfums Annick Goutal. Il rejoint la Kao Corporation en 1993, pour intégrer Givaudan cinq ans plus tard. Auprès de Jean Amic, Olivier a découvert et développé une passion pour la parfumerie de prestige, et a toujours à cœur d'approfondir son expertise et d'élargir ses horizons."</string>
+    <string name="profile08">"Alexandra rêvait de devenir parfumeuse depuis l'âge de douze ans. Guidée par une détermination inébranlable, elle passe un Deug A à l'ISIPCA (Institut Supérieur International du Parfum de la Cosmétique et de l’Aromatique Alimentaire) et termine major de sa promotion. Elle est employée à un poste d'assistante parfumeuse chez Quest, avant d'être promue au rang de jeune parfumeuse. Aujourd'hui, Alexandra réalise l'ambition de sa vie en travaillant comme parfumeuse chez Givaudan."</string>
 </resources>
