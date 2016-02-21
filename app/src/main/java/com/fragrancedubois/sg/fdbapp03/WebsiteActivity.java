@@ -23,13 +23,18 @@ public class WebsiteActivity extends AppCompatActivity {
         Utils.enableAppbarWithBack(this);
 
         WebView webview = (WebView) findViewById(R.id.webview);
+        LinearLayout warning = (LinearLayout) findViewById(R.id.networkwarninglayout);
 
         if(!Utils.getNetworkConnection(this))
         {
-            LinearLayout warning = (LinearLayout) findViewById(R.id.networkwarninglayout);
             webview.setVisibility(View.INVISIBLE);
             warning.setVisibility(View.VISIBLE);
             return;
+        }
+        else
+        {
+            warning.setVisibility(View.INVISIBLE);
+            webview.setVisibility(View.VISIBLE);
         }
 
 
