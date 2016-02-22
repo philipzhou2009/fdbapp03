@@ -205,6 +205,15 @@ public class ColorWheel extends AppCompatActivity {
         he.setText(R.string.heavy);
         he.set
         */
+
+        int mw = 0;
+        TextView fresher = (TextView) findViewById(R.id.fresher);
+        fresher.measure(0, 0);       //must call measure!
+        mw = fresher.getMeasuredWidth();
+        fresher.setX(bgCwCX - 590 * mDiameterRatio - mw - 15);
+
+        TextView richer = (TextView) findViewById(R.id.richer);
+        richer.setX(bgCwCX + 590*mDiameterRatio + 15);
     }
 
     /*

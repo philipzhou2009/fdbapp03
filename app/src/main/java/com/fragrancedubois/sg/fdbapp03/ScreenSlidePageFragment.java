@@ -110,17 +110,6 @@ public class ScreenSlidePageFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        /*
-        ViewGroup rootView;
-        if (mPageNumber == 0) {
-            rootView = (ViewGroup) inflater.inflate(R.layout.notes, container, false);
-        } else {
-            rootView = (ViewGroup) inflater.inflate(R.layout.perfumer, container, false);
-
-        }
-        */
-        //this.getActivity().setTheme(R.style.FDBPerfumeNotesStyle1);
-
         int layoutId = (mPageNumber == 0) ? R.layout.notes : R.layout.perfumer;
         ViewGroup rootView = (ViewGroup) inflater.inflate(layoutId, container, false);
 
@@ -221,8 +210,7 @@ public class ScreenSlidePageFragment extends Fragment {
             }
 
             int[] texts = {R.id.textView2, R.id.textView4, R.id.textView5, R.id.textView7, R.id.textView9,};
-            for(int textId : texts)
-            {
+            for (int textId : texts) {
                 TextView tv = (TextView) rootView.findViewById(textId);
                 tv.setTextColor(Color.parseColor(fontcolor));
             }

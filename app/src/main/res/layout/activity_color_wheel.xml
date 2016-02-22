@@ -33,15 +33,17 @@
             android:textColor="@color/white"/>
 
         <TextView
+            android:id="@+id/richer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_alignParentRight="true"
             android:text="@string/richer"
-            android:paddingRight="280dp"
+            android:paddingRight="240dp"
             android:textColor="@color/white"/>
 
         <TextView
+            android:id="@+id/lighter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
@@ -51,12 +53,13 @@
             android:textColor="@color/white"/>
 
         <TextView
+            android:id="@+id/fresher"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_alignParentLeft="true"
             android:text="@string/fresher"
-            android:paddingLeft="260dp"
+            android:paddingLeft="220dp"
             android:textColor="@color/white"/>
     </RelativeLayout>
 

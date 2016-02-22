@@ -121,7 +121,7 @@ public class FdbAddition extends FdbWheeler implements Parcelable {
 
     public TextView createTextViewWithEvent(final Activity activity, final View parentView) {
 
-        Log.e("fcw", "createTextViewWithEvent,mName="+mName);
+        Log.e("fcw", "createTextViewWithEvent,mName=" + mName);
         TextView tv = new TextView(activity);
         //tv.setText(mName);
         int noteId = Utils.getResId(mName, R.string.class);

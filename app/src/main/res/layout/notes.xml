@@ -6,8 +6,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
+        android:layout_height="match_parent">
 
         <ImageView
             android:id="@+id/imageView2"
@@ -42,8 +41,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:text="Medium Text"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:typeface="monospace" />
+                android:textAppearance="?android:attr/textAppearanceMedium" />
 
             <TextView
                 android:id="@+id/perfumerName"
@@ -52,12 +50,11 @@
                 android:layout_gravity="center_horizontal"
                 android:text="Medium Text"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="#ffffffff"
-                android:typeface="monospace" />
+                android:textColor="#ffffffff" />
 
             <TextView
                 android:id="@+id/textView4"
-                android:layout_width="300dp"
+                android:layout_width="400dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="20dp"
@@ -65,12 +62,10 @@
                 android:text="@string/oud100"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#ffffffff"
-                android:textSize="20sp"
-                android:typeface="monospace" />
+                android:textSize="20sp" />
 
             <View
                 android:id="@+id/stick1"
-
                 android:layout_width="160dp"
                 android:layout_height="2dp"
                 android:layout_gravity="center_horizontal"
@@ -89,8 +84,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="5dp"
-                android:layout_marginTop="5dp"
+
                 android:text="@string/topnotes"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#ffffffff"
@@ -100,7 +94,7 @@
                 android:id="@+id/notesLayout0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"/>
+                android:orientation="horizontal" />
 
             <View
                 android:id="@+id/stick3"
@@ -114,8 +108,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="5dp"
-                android:layout_marginTop="5dp"
+
                 android:text="@string/middlenotes"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#ffffffff"
@@ -129,7 +122,6 @@
 
             <View
                 android:id="@+id/stick4"
-
                 android:layout_width="2dp"
                 android:layout_height="60dp"
                 android:layout_gravity="center_horizontal"
@@ -140,8 +132,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="5dp"
-                android:layout_marginTop="5dp"
                 android:text="@string/basenotes"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#ffffffff"
@@ -160,8 +150,7 @@
                 android:layout_gravity="center_horizontal"
                 android:text="@string/oud101"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="#ffffffff"
-                android:typeface="monospace" />
+                android:textColor="#ffffffff" />
 
             <View
                 android:id="@+id/stick5"
