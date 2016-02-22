@@ -8,14 +8,49 @@
         <topnotes>Bergamot, Cardamom</topnotes>
         <middlenotes>Rose, Jasmin</middlenotes>
         <basenotes>Sandalwood, Saffron, Patchouli, Vanilla, Musk, Amber</basenotes>
-        <fontcolor>#c8000000</fontcolor>
+        <fontcolor>#c8ffffff</fontcolor>
         <portrait>perfumer8</portrait>
         <profile>profile01</profile>
-
         <cwx>485</cwx>
         <cwy>530</cwy>
         <cww>60</cww>
         <cwh>120</cwh>
+    </perfume>
+
+    <!-- LONDON -->
+    <perfume>
+        <title>LONDON OUD</title>
+        <thumbnail>noir_100ml</thumbnail>
+        <themecolor>#c8000000</themecolor>
+        <perfumer>FRANÇOIS MERLE-BAUDOIN</perfumer>
+        <topnotes>Lemon, Bergamot, Peppermint</topnotes>
+        <middlenotes>Lavender, Jasmin, White_flowers, Marine_Notes</middlenotes>
+        <basenotes>Patchouli, Cedarwood, Nutmeg, Cardamom</basenotes>
+        <fontcolor>#c8ffffff</fontcolor>
+        <portrait>perfumer8</portrait>
+        <profile>profile01</profile>
+        <cwx>566</cwx>
+        <cwy>438</cwy>
+        <cww>130</cww>
+        <cwh>65</cwh>
+    </perfume>
+
+    <!-- SAHRAA -->
+    <perfume>
+        <title>OUD SAHRAA</title>
+        <thumbnail>noir_100ml</thumbnail>
+        <themecolor>#c8000000</themecolor>
+        <perfumer>FRANÇOIS MERLE-BAUDOIN</perfumer>
+        <topnotes>Grapefruit</topnotes>
+        <middlenotes>Rose_Absolute, Geranium, Jasmine, Patchouli</middlenotes>
+        <basenotes>Black_Pepper, Sandalwood, Safran, Vanilla, Amber</basenotes>
+        <fontcolor>#c8ffffff</fontcolor>
+        <portrait>perfumer8</portrait>
+        <profile>profile01</profile>
+        <cwx>648</cwx>
+        <cwy>548</cwy>
+        <cww>60</cww>
+        <cwh>150</cwh>
     </perfume>
 
     <!-- blue -->
@@ -25,8 +60,8 @@
         <themecolor>#c8006488</themecolor>
         <perfumer>GUILLAUME FLAVIGNY</perfumer>
         <topnotes>Cardamom, Nutmeg, Mandarin</topnotes>
-        <middlenotes>Frankincense, Ciste, Myrrh Essence, Amber</middlenotes>
-        <basenotes>Opoponax Resinoid, Myrrh, Resinoid, Styrax, Benzoin</basenotes>
+        <middlenotes>Frankincense, Ciste, Myrrh_Essence, Amber</middlenotes>
+        <basenotes>Opoponax_Resinoid, Myrrh, Resinoid, Styrax, Benzoin</basenotes>
         <fontcolor>#c8ffffff</fontcolor>
         <portrait>perfumer1</portrait>
         <profile>profile02</profile>
@@ -43,9 +78,9 @@
         <themecolor>#c8ff9d1e</themecolor>
         <perfumer>CAROLINE SABAS</perfumer>
         <topnotes>Coconut, Fruits</topnotes>
-        <middlenotes>Vanilla Bourbon</middlenotes>
+        <middlenotes>Vanilla_Bourbon</middlenotes>
         <basenotes>Vanilla, Musk</basenotes>
-        <fontcolor>#c8000000</fontcolor>
+        <fontcolor>#c8ffffff</fontcolor>
         <portrait>perfumer7</portrait>
         <profile>profile03</profile>
         <cwx>290</cwx>
@@ -60,13 +95,12 @@
         <thumbnail>jaune_100ml</thumbnail>
         <themecolor>#c8fee300</themecolor>
         <perfumer>NATHALIE CETTO</perfumer>
-        <topnotes>Monoi, Ylang Ylang, Pineapple, Water Fruits</topnotes>
-        <middlenotes>Jasmin, Orange Blossom, White Flowers, Salicylate</middlenotes>
+        <topnotes>Monoi, Ylang_Ylang, Pineapple, Water_Fruits</topnotes>
+        <middlenotes>Jasmin, Orange_Blossom, White_Flowers, Salicylate</middlenotes>
         <basenotes>Lactonic, Vanilla, Musk</basenotes>
         <fontcolor>#c8000000</fontcolor>
         <portrait>perfumer5</portrait>
         <profile>profile04</profile>
-
         <cwx>138</cwx>
         <cwy>315</cwy>
         <cww>90</cww>
@@ -79,10 +113,10 @@
         <thumbnail>rouge_100ml</thumbnail>
         <themecolor>#c8a2202a</themecolor>
         <perfumer>GUILLAUME FLAVIGNY</perfumer>
-        <topnotes>Lemon, Pink Pepper</topnotes>
+        <topnotes>Lemon, Pink_Pepper</topnotes>
         <middlenotes>Cedarwood, Patchouli, Sandalwood</middlenotes>
         <basenotes>Musk</basenotes>
-        <fontcolor>#c8000000</fontcolor>
+        <fontcolor>#c8ffffff</fontcolor>
         <portrait>perfumer2</portrait>
         <profile>profile02</profile>
         <cwx>505</cwx>
@@ -99,8 +133,8 @@
         <perfumer>HAMID MERATI-KASHANI</perfumer>
         <topnotes>Bergamot, Fruit</topnotes>
         <middlenotes>Geranium, Rose, Sandalwood, Amber</middlenotes>
-        <basenotes/>
-        <fontcolor>#c8000000</fontcolor>
+        <basenotes />
+        <fontcolor>#c8ffffff</fontcolor>
         <portrait>perfumer3</portrait>
         <profile>profile06</profile>
         <cwx>795</cwx>
@@ -118,7 +152,7 @@
         <topnotes>Bergamot, Ginger, Cardamom</topnotes>
         <middlenotes>Coriander Seeds, Nutmeg, Geranium</middlenotes>
         <basenotes>Vetiver, Cedarwood, Musk</basenotes>
-        <fontcolor>#c8000000</fontcolor>
+        <fontcolor>#c8ffffff</fontcolor>
         <portrait>perfumer6</portrait>
         <profile>profile07</profile>
         <cwx>155</cwx>
@@ -133,10 +167,10 @@
         <thumbnail>violet_100ml</thumbnail>
         <themecolor>#c86a3d76</themecolor>
         <perfumer>ALEXANDRA KOSINSKI</perfumer>
-        <topnotes>Mandarin, Black Pepper, Elemi</topnotes>
-        <middlenotes>Frankincense, Tonka Bean, Nutmeg</middlenotes>
-        <basenotes>Cistus, Soft Amber, Musk</basenotes>
-        <fontcolor>#c8000000</fontcolor>
+        <topnotes>Mandarin, Black_Pepper, Elemi</topnotes>
+        <middlenotes>Frankincense, Tonka_Bean, Nutmeg</middlenotes>
+        <basenotes>Cistus, Soft_Amber, Musk</basenotes>
+        <fontcolor>#c8ffffff</fontcolor>
         <portrait>perfumer4</portrait>
         <profile>profile08</profile>
         <cwx>983</cwx>
@@ -145,28 +179,5 @@
         <cwh>280</cwh>
     </perfume>
 
-    <!-- LONDON -->
-    <!--
-    <perfume>
-        <title>LONDON OUD</title>
-        <thumbnail>violet_100ml</thumbnail>
-        <themecolor>#c86a3d76</themecolor>
-        <perfumer>ALEXANDRA KOSINSKI</perfumer>
-        <topnotes>Mandarin, Black Pepper, Elemi</topnotes>
-        <middlenotes>Frankincense, Tonka Bean, Nutmeg</middlenotes>
-        <basenotes>Cistus, Soft Amber, Musk</basenotes>
-        <fontcolor>#c8000000</fontcolor>
-        <portrait>perfumer4</portrait>
-        <profile>Alexandra has dreamt of being a perfumer since the age of twelve. Strong-minded and
-            determined, she studied for her Deug A, at ISIPCA (Institut Supérieur International du
-            Parfum de la Cosmétique et de l’Aromatique Alimentaire) and finished top of her class.
-            She began working at Quest as an assistant perfumer, before progressing to junior
-            perfumer. Today, Alexandra is fulfilling her life’s ambition as a perfumer at Givaudan.
-        </profile>
-        <cwx>983</cwx>
-        <cwy>484</cwy>
-        <cww>100</cww>
-        <cwh>280</cwh>
-    </perfume>
-    -->
+
 </fdb>

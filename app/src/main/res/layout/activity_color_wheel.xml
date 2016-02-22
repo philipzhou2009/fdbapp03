@@ -8,7 +8,9 @@
         android:id="@+id/include"
         layout="@layout/appbar" />
 
-    <LinearLayout
+    <include layout="@layout/bg_general" />
+
+    <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/include"
@@ -21,7 +23,42 @@
             android:layout_weight="1"
             android:scaleType="fitCenter"
             android:src="@drawable/colour_wheel_1180_oud" />
-    </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/heavy"
+            android:paddingLeft="80dp"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:text="@string/richer"
+            android:paddingRight="280dp"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:text="@string/lighter"
+            android:paddingRight="100dp"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:text="@string/fresher"
+            android:paddingLeft="260dp"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
 
 
     <FrameLayout
@@ -30,58 +67,9 @@
         android:layout_height="fill_parent"
         android:layout_below="@+id/include"
         android:alpha="0"
-        android:foreground="#000000">
+        android:foreground="#000000"
+        android:visibility="gone">
 
     </FrameLayout>
 
-    <!--
-        <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:scaleType="fitCenter"
-        android:src="@drawable/colour_wheel_w1600" />
-
-    <FrameLayout
-        android:id="@+id/fcwdimlayer"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:alpha="0"
-        android:foreground="#000000">
-
-    </FrameLayout>
-
-
-    <LinearLayout
-        android:id="@+id/fcwtapcustomize"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="30dp"
-        android:layout_marginRight="30dp"
-        android:gravity="center"
-        android:orientation="vertical">
-
-        <ImageView
-            android:id="@+id/flower_customize"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:onClick="showcustomization"
-            android:src="@drawable/icon" />
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Customize"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="#ff89723a"
-            android:textSize="22sp"
-            android:typeface="monospace" />
-
-    </LinearLayout>
-    -->
 </RelativeLayout>

@@ -20,6 +20,7 @@ import android.app.Activity;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -109,7 +110,7 @@ public class ScreenSlidePageFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
+        /*
         ViewGroup rootView;
         if (mPageNumber == 0) {
             rootView = (ViewGroup) inflater.inflate(R.layout.notes, container, false);
@@ -117,24 +118,32 @@ public class ScreenSlidePageFragment extends Fragment {
             rootView = (ViewGroup) inflater.inflate(R.layout.perfumer, container, false);
 
         }
+        */
+        //this.getActivity().setTheme(R.style.FDBPerfumeNotesStyle1);
 
-        String sTmp = "";
+        int layoutId = (mPageNumber == 0) ? R.layout.notes : R.layout.perfumer;
+        ViewGroup rootView = (ViewGroup) inflater.inflate(layoutId, container, false);
 
         // theme
         String themecolor = perfumedata.get(2);
         LinearLayout perfumeView = (LinearLayout) rootView.findViewById(R.id.perfume);
         perfumeView.setBackgroundColor(Color.parseColor(themecolor));
 
+        // fontcolor
+        String fontcolor = perfumedata.get(7);
+
         // perfume
         String perfumeTitle = perfumedata.get(0);
         TextView titleView = (TextView) rootView.findViewById(R.id.perfumeTitle);
         titleView.setText(perfumeTitle);
+        titleView.setTextColor(Color.parseColor(fontcolor));
 
         // perfumer
         String perfumerName = perfumedata.get(6);
         TextView perfumerNameView = (TextView) rootView.findViewById(R.id.perfumerName);
-        sTmp = getActivity().getString(R.string.by) + " " + perfumerName;
+        String sTmp = getActivity().getString(R.string.by) + " " + perfumerName;
         perfumerNameView.setText(sTmp);
+        perfumerNameView.setTextColor(Color.parseColor(fontcolor));
 
         Activity activity = getActivity();
         final View parentView = activity.findViewById(R.id.pager);
@@ -157,50 +166,65 @@ public class ScreenSlidePageFragment extends Fragment {
                 LinearLayout notesLayout = (LinearLayout) rootView.findViewById(id);
 
                 String[] notes = sNotes.split(",");
+                int notesLen = notes.length;
                 if (notes.length > 0 && !sNotes.equals("")) {
+                    int iCount = 0;
                     for (String noteName : notes) {
-                        String noteNameNew = noteName.trim();
+                        iCount++;
 
-                        //Log.e("fcw,current note:", noteNameNew);
+                        String noteNameNew = noteName.trim();
+                        Log.e("fcw,current note:", noteNameNew);
+
                         TextView textView = null;
                         boolean bFlag = false;
                         for (FdbAddition noteObj : mNotes) {
-
                             if (noteObj.mName.equalsIgnoreCase(noteNameNew)) {
                                 textView = noteObj.createTextViewWithEvent(activity, parentView);
                                 bFlag = true;
                                 break;
                             }
-
                         }
+
                         if (bFlag == false) {
                             textView = new TextView(activity);
 
                             int noteId = Utils.getResId(noteNameNew, R.string.class);
-                            if(noteId != -1)
-                            {
+                            if (noteId != -1) {
                                 textView.setText(noteId);
-                            }
-                            else {
+                            } else {
                                 textView.setText(noteNameNew);
                             }
 
-                            //textView.setText(noteNameNew);
                             textView.setTextSize(18);
-                            textView.setTextColor(Color.WHITE);
+                            textView.setTextColor(Color.parseColor(fontcolor));
                             //textView.setTypeface(Typeface.MONOSPACE);
                         }
                         notesLayout.addView(textView);
 
-                        TextView textView1 = new TextView(activity);
-                        textView1.setText(", ");
-                        textView1.setTextSize(18);
-                        textView1.setTextColor(Color.WHITE);
-
-                        notesLayout.addView(textView1);
+                        if (iCount < notesLen) {
+                            TextView textView1 = new TextView(activity);
+                            textView1.setText(", ");
+                            textView1.setTextSize(18);
+                            textView1.setTextColor(Color.parseColor(fontcolor));
+                            notesLayout.addView(textView1);
+                        }
 
                     }
                 }
+            }
+
+            // change color
+            int[] sticks = {R.id.stick1, R.id.stick2, R.id.stick3, R.id.stick4, R.id.stick5};
+            for (int stickId : sticks) {
+                View view = (View) rootView.findViewById(stickId);
+                view.setBackgroundColor(Color.parseColor(fontcolor));
+            }
+
+            int[] texts = {R.id.textView2, R.id.textView4, R.id.textView5, R.id.textView7, R.id.textView9,};
+            for(int textId : texts)
+            {
+                TextView tv = (TextView) rootView.findViewById(textId);
+                tv.setTextColor(Color.parseColor(fontcolor));
             }
 
         } else {
@@ -215,14 +239,13 @@ public class ScreenSlidePageFragment extends Fragment {
             TextView profileView = (TextView) rootView.findViewById(R.id.perfumerProfile);
 
             int strId = Utils.getResId(profile, R.string.class);
-            if(strId != -1)
-            {
+            if (strId != -1) {
                 profileView.setText(strId);
-            }
-            else {
+            } else {
                 profileView.setText(profile);
             }
             //profileView.setText(profile);
+            profileView.setTextColor(Color.parseColor(fontcolor));
         }
 
         return rootView;

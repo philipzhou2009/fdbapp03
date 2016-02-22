@@ -199,6 +199,12 @@ public class ColorWheel extends AppCompatActivity {
             colorWheelLayout.addView(view);
         }
 
+        // heavy ...
+        /*
+        TextView he = new TextView(this);
+        he.setText(R.string.heavy);
+        he.set
+        */
     }
 
     /*

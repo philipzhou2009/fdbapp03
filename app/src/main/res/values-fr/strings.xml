@@ -125,20 +125,21 @@
     <string name="Tonka_Bean">Fève de Tonka</string>
     <string name="Cistus">Cistus</string>
     <string name="Soft_Amber">Douce Ambre</string>
+    <string name="Grapefruit">Pamplemousse</string>
+    <string name="Marine_Notes">Notes Marines</string>
 
     <string name="profile01">"Né à Grasse, en France, François est issu de cinq générations de parfumeurs français : c'est son grand-père qui a créé le célèbre Anaïs Anaïs. Fort de toute la richesse d'une carrière longue de plus de 25 ans, il éclaire de ses lumières les postes qu'il occupe au sein de SARL Creative Scents et SARL Creations and Parfums."</string>
     <string name="profile02">"Après des études de chimie, Guillaume s'inscrit à l'ISIPCA (Institut Supérieur International du Parfum de la Cosmétique et de l’Aromatique Alimentaire). En 1998, à la poursuite de son rêve d'entrer dans le monde de la parfumerie, il rejoint la promotion Bel Aesthète de la MST ISIPCA. Désireux d'approfondir sa connaissance et de développer encore sa créativité, Guillaume étudie ensuite au sein de l'École de parfumerie Givaudan ; en 2003, à l'âge de 27 ans, il intègre l'équipe de Parfumerie Fine de Givaudan Paris."</string>
     <string name="profile03">"Née à Cannes, en France, Caroline a effectué deux ans d'études au sein du prestigieux ISIPCA (Institut Supérieur International du Parfum de la Cosmétique et de l’Aromatique Alimentaire) à Versailles, et complété sa formation chez Chanel à Paris avant de devenir officiellement parfumeuse.  Elle intègre Fragrance Resources à New York en 1997, avant de rejoindre l'équipe de Givaudan en 2003."</string>
     <string name="profile04">"Nathalie a grandi à Grasse. Après avoir décroché un doctorat en Pharmacie, elle choisit de s'adonner à sa passion et s'inscrit à l'École de parfumerie Givaudan. À 29 ans, elle intègre l'équipe de Parfumerie Fine de Paris. Son enthousiasme, sa créativité et son expertise confèrent une nouvelle dimension à la fragrance la plus optimiste de Fragrance Du Bois."</string>
 
-    <!--<string name="profile05">After studying Chemistry, Guillaume enrolled at the ISIPCA (Institut Supérieur
-            International du Parfum de la Cosmétique et de l’Aromatique Alimentaire). In 1998,
-            following his dream to enter the world of perfumery, he joined in the promotion of MST
-            ISIPCA’s Bel Aesthète. With a desire to broaden his knowledge and further develop his
-            creativity, Guillaume then studied at the Givaudan School of Perfumery, and in 2003, at
-            the age of 27, joined the Fine Fragrance team of Perfumers at Givaudan, Paris.</string>-->
     <string name="profile06">"L'intérêt de Hamid pour l'art de la parfumerie s'est trouvé avivé par l'invitation d'un ami de la famille à visiter une plantation de roses à Ghamsar, Cité antique célèbre pour ses roses, et située au cœur du désert de l'Iran. Hamid éprouva lors de cette visite une telle fascination pour ces champs parfumés, pour le spectacle des cueilleuses de roses et pour le procédé de distillation, qu'un horizon nouveau s'ouvrit devant lui."</string>
     <string name="profile07">"En 1990, tout frais émoulu de l'ISIPCA (Institut Supérieur International du Parfum de la Cosmétique et de l’Aromatique Alimentaire), Olivier est embauché par Parfums Annick Goutal. Il rejoint la Kao Corporation en 1993, pour intégrer Givaudan cinq ans plus tard. Auprès de Jean Amic, Olivier a découvert et développé une passion pour la parfumerie de prestige, et a toujours à cœur d'approfondir son expertise et d'élargir ses horizons."</string>
     <string name="profile08">"Alexandra rêvait de devenir parfumeuse depuis l'âge de douze ans. Guidée par une détermination inébranlable, elle passe un Deug A à l'ISIPCA (Institut Supérieur International du Parfum de la Cosmétique et de l’Aromatique Alimentaire) et termine major de sa promotion. Elle est employée à un poste d'assistante parfumeuse chez Quest, avant d'être promue au rang de jeune parfumeuse. Aujourd'hui, Alexandra réalise l'ambition de sa vie en travaillant comme parfumeuse chez Givaudan."</string>
     <string name="networkwarning">"S'il vous plaît vérifier votre connexion réseau."</string>
+
+    <string name="heavy">Lourd</string>
+    <string name="richer">Richer</string>
+    <string name="lighter">Plus léger</string>
+    <string name="fresher">Plus frais</string>
 </resources>

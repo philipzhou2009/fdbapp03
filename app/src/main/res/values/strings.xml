@@ -128,6 +128,9 @@
     <string name="Tonka_Bean">Tonka Bean</string>
     <string name="Cistus">Cistus</string>
     <string name="Soft_Amber">Soft Amber</string>
+    <string name="Grapefruit">Grapefruit</string>
+    <string name="Rose_Absolute">Rose Absolute</string>
+    <string name="Marine_Notes">Marine notes</string>
 
     <string name="profile01">Born in Grasse, France, François is a fifth generation French perfumer – his
             grandfather created the world-renowned Anaïs Anaïs. He brings a wealth of experience
@@ -151,14 +154,7 @@
             the age of 29, she joined the team of Fine Fragrance perfumers in Paris. Her enthusiasm,
             creativity, and expertise have brought a new dimension to Fragrance Du Bois’ most
             optimistic fragrance.</string>
-    <!--
-    <string name="profile05">After studying Chemistry, Guillaume enrolled at the ISIPCA (Institut Supérieur
-            International du Parfum de la Cosmétique et de l’Aromatique Alimentaire). In 1998,
-            following his dream to enter the world of perfumery, he joined in the promotion of MST
-            ISIPCA’s Bel Aesthète. With a desire to broaden his knowledge and further develop his
-            creativity, Guillaume then studied at the Givaudan School of Perfumery, and in 2003, at
-            the age of 27, joined the Fine Fragrance team of Perfumers at Givaudan, Paris.</string>
-            -->
+
     <string name="profile06">Hamid’s interest in perfumery was stimulated by an invitation from family friends
             to visit a rose plantation in Ghamsar – an ancient city famous for its rose
             cultivations, and located in the central Iranian desert. Hamid was so fascinated by what
@@ -175,4 +171,8 @@
             She began working at Quest as an assistant perfumer, before progressing to junior
             perfumer. Today, Alexandra is fulfilling her life’s ambition as a perfumer at Givaudan.</string>
     <string name="networkwarning">Please Check Your Network Connection.</string>
+    <string name="heavy">Heavy</string>
+    <string name="richer">Richer</string>
+    <string name="lighter">Lighter</string>
+    <string name="fresher">Fresher</string>
 </resources>

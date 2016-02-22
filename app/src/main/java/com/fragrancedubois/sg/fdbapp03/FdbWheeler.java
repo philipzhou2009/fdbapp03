@@ -14,9 +14,6 @@ import android.widget.TextView;
  */
 public class FdbWheeler implements Comparable<FdbWheeler> {
 
-    //static float mScreenRatioW = 1.0f;
-    //static float mScreenRatioH = 1.0f;
-
     public String mName = "";
     public float mXcoord;
     public float mYcoord;

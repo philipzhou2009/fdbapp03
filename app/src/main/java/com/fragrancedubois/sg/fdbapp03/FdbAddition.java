@@ -56,13 +56,11 @@ public class FdbAddition extends FdbWheeler implements Parcelable {
         }
     };
 
-
     // end of implementation of Parcelable
 
 
     public FdbAddition(String name, float xcoord, float ycoord, String imagename) {
         super(name, xcoord, ycoord, 0);
-
         mImageName = imagename;
         mImageResId = FdbHelper.getId(mImageName, R.drawable.class);
     }
@@ -123,17 +121,13 @@ public class FdbAddition extends FdbWheeler implements Parcelable {
 
     public TextView createTextViewWithEvent(final Activity activity, final View parentView) {
 
-        //Log.e("fcw", "createTextViewWithEvent");
-        TextView tv;
-        tv = new TextView(activity);
-        //activity.getResources().getString()
+        Log.e("fcw", "createTextViewWithEvent,mName="+mName);
+        TextView tv = new TextView(activity);
         //tv.setText(mName);
         int noteId = Utils.getResId(mName, R.string.class);
-        if(noteId != -1)
-        {
+        if (noteId != -1) {
             tv.setText(noteId);
-        }
-        else {
+        } else {
             tv.setText(mName);
         }
 
@@ -161,11 +155,9 @@ public class FdbAddition extends FdbWheeler implements Parcelable {
                 TextView textView = (TextView) popupView.findViewById(R.id.popup_name);
                 //textView.setText(mName);
                 int noteId = Utils.getResId(mName, R.string.class);
-                if(noteId != -1)
-                {
+                if (noteId != -1) {
                     textView.setText(noteId);
-                }
-                else {
+                } else {
                     textView.setText(mName);
                 }
 
