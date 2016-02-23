@@ -113,7 +113,9 @@ public class PersonalityActivity extends AppCompatActivity {
             iDp = 55;
             iVi = View.VISIBLE;
             //tv.setText(R.string.go_to_colorwheel);
+            tv.setVisibility(View.INVISIBLE);
         } else {
+            tv.setVisibility(View.VISIBLE);
             tv.setText("" + count);
         }
 
